@@ -1,94 +1,76 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import { useState, useId } from 'react';
+import Button from '../../components/ui/button';
 
 export default function ButtonsPage() {
-  const [lastAction, setLastAction] = useState("")
+  const [messages, setMessages] = useState({
+    dbClickMessage: '',
+    rightClickMessage: '',
+    clickMessage: ''
+  });
+  
+  const clickButtonId = useId();
 
-  const handleClick = (action: string) => {
-    setLastAction(action)
-  }
+
+  const handleClick = () => {
+    setMessages(prev => ({ ...prev, clickMessage: 'You have done a dynamic click' }));
+  };
+
+  const handleDoubleClick = () => {
+    setMessages(prev => ({ ...prev, dbClickMessage: 'You have done a double click' }));
+  };
+
+  const handleRightClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setMessages(prev => ({ ...prev, rightClickMessage: 'You have done a right click' }));
+  };
 
   return (
-    <div className="space-y-8">
-      <h1 className="text-4xl font-bold text-center text-[#00FFFF]">Buttons</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <Button
-          variant="default"
-          onClick={() => handleClick("Default button clicked")}
-          onContextMenu={(e) => {
-            e.preventDefault()
-            handleClick("Default button right-clicked")
-          }}
-          onDoubleClick={() => handleClick("Default button double-clicked")}
-          className="text-white"
-        >
-          Default Button
-        </Button>
-        <Button
-          variant="destructive"
-          onClick={() => handleClick("Destructive button clicked")}
-          onContextMenu={(e) => {
-            e.preventDefault()
-            handleClick("Destructive button right-clicked")
-          }}
-          onDoubleClick={() => handleClick("Destructive button double-clicked")}
-          className="text-white"
-        >
-          Destructive Button
-        </Button>
-        <Button
-          variant="outline"
-          onClick={() => handleClick("Outline button clicked")}
-          onContextMenu={(e) => {
-            e.preventDefault()
-            handleClick("Outline button right-clicked")
-          }}
-          onDoubleClick={() => handleClick("Outline button double-clicked")}
-          className="text-white hover:text-black"
-        >
-          Outline Button
-        </Button>
-        <Button
-          variant="secondary"
-          onClick={() => handleClick("Secondary button clicked")}
-          onContextMenu={(e) => {
-            e.preventDefault()
-            handleClick("Secondary button right-clicked")
-          }}
-          onDoubleClick={() => handleClick("Secondary button double-clicked")}
-          className="text-white"
-        >
-          Secondary Button
-        </Button>
-        <Button
-          variant="ghost"
-          onClick={() => handleClick("Ghost button clicked")}
-          onContextMenu={(e) => {
-            e.preventDefault()
-            handleClick("Ghost button right-clicked")
-          }}
-          onDoubleClick={() => handleClick("Ghost button double-clicked")}
-          className="text-white hover:text-black"
-        >
-          Ghost Button
-        </Button>
-        <Button
-          variant="link"
-          onClick={() => handleClick("Link button clicked")}
-          onContextMenu={(e) => {
-            e.preventDefault()
-            handleClick("Link button right-clicked")
-          }}
-          onDoubleClick={() => handleClick("Link button double-clicked")}
-          className="text-[#00FFFF]"
-        >
-          Link Button
-        </Button>
+    <div className="max-w-2xl mx-auto h-[80vh] p-6">
+      <h1 className="text-3xl font-bold mb-6">Buttons - Practice UPEX</h1>
+      
+      <div className="space-y-4">
+        <div>
+          <Button id="dbClick" onDoubleClick={handleDoubleClick}>
+            Double Click Me
+          </Button>
+        </div>
+        
+        <div>
+          <Button 
+            id="rightClick" 
+            onContextMenu={handleRightClick}
+          >
+            Right Click Me
+          </Button>
+        </div>
+        
+        <div>
+          <Button id={clickButtonId} onClick={handleClick}>
+            Click Me
+          </Button>
+        </div>
+  
+        {/* Messages section */}
+        <div className="mt-6 h-[200px] overflow-y-auto space-y-2">
+          {messages.dbClickMessage && (
+            <div className="p-4 bg-green-100 text-green-700 rounded">
+              {messages.dbClickMessage}
+            </div>
+          )}
+          {messages.rightClickMessage && (
+            <div className="p-4 bg-green-100 text-green-700 rounded">
+              {messages.rightClickMessage}
+            </div>
+          )}
+          {messages.clickMessage && (
+            <div className="p-4 bg-green-100 text-green-700 rounded">
+              {messages.clickMessage}
+            </div>
+          )}
+        </div>
       </div>
-      <p className="text-center mt-8">Last action: {lastAction}</p>
     </div>
-  )
+  );
 }
-

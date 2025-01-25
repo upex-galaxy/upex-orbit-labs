@@ -2,6 +2,7 @@ import Link from "next/link"
 
 const components = [
   { name: "Buttons", href: "/buttons" },
+  { name: "Text-box", href: "/text-box" },
   { name: "Dropdowns", href: "/dropdowns" },
   { name: "Sliders", href: "/sliders" },
   { name: "Forms", href: "/forms" },
