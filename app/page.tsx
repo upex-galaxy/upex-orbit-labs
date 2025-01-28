@@ -9,6 +9,7 @@ const components = [
   { name: "Drag and Drop", href: "/drag-and-drop" },
   { name: "Upload/Download", href: "/upload-download" },
   { name: "Static Table", href: "/static-table" },
+  { name: "Orbit Labs", href: "/orbit-labs" },
 ]
 
 export default function Home() {

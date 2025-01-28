@@ -4,15 +4,15 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 
-const menuItems = [
-  { name: "Buttons", href: "/buttons" },
-  { name: "Dropdowns", href: "/dropdowns" },
-  { name: "Sliders", href: "/sliders" },
-  { name: "Forms", href: "/forms" },
-  { name: "Drag and Drop", href: "/drag-and-drop" },
-  { name: "Upload/Download", href: "/upload-download" },
-  { name: "Static Table", href: "/static-table" },
-]
+// const menuItems = [
+//   { name: "Buttons", href: "/buttons" },
+//   { name: "Dropdowns", href: "/dropdowns" },
+//   { name: "Sliders", href: "/sliders" },
+//   { name: "Forms", href: "/forms" },
+//   { name: "Drag and Drop", href: "/drag-and-drop" },
+//   { name: "Upload/Download", href: "/upload-download" },
+//   { name: "Static Table", href: "/static-table" },
+// ]
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -32,7 +32,7 @@ export default function Header() {
       </div>
       {isMenuOpen && (
         <nav className="container mx-auto px-4 py-4">
-          <ul className="space-y-2">
+          {/* <ul className="space-y-2">
             {menuItems.map((item) => (
               <li key={item.name}>
                 <Link
@@ -44,7 +44,7 @@ export default function Header() {
                 </Link>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </nav>
       )}
     </header>
