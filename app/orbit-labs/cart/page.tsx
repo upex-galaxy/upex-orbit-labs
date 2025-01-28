@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/orbit-labs/card";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import productsData from "../../../app/data/products.json";
+import DropdownMenu from "../../../app/orbit-labs/login/dropdownMenu";
 
 interface Product {
   id: string;
@@ -57,8 +58,12 @@ export default function CartPage() {
     <div className="min-h-screen p-8 bg-transparent">
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold text-white">Shopping Cart</h1>
+          <div className="flex items-center gap-1">
+            <DropdownMenu />
+            <h1 className="text-3xl font-bold text-white">Shopping Cart</h1>
+          </div>
           <button
+            id="continue-shopping"
             onClick={continueShopping}
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
           >

@@ -4,11 +4,10 @@ import { useState, useEffect } from "react";
 import { Card, CardContent } from "./card";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import Link from 'next/link';
-import 'tailwindcss/tailwind.css';
+import Link from "next/link";
+import "tailwindcss/tailwind.css";
 import { Product } from "../../../lib/utils";
-import productsData from '../../../app/data/products.json';
-
+import productsData from "../../../app/data/products.json";
 
 const PRODUCTS: Product[] = productsData;
 
@@ -43,8 +42,9 @@ export default function Products() {
       <div className="flex justify-between items-center mb-4">
         <div className="flex-1" />
         <button
+          id="view-cart"
           onClick={viewCart}
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          className="bg-blue-500 text-white px-8 py-2 rounded hover:bg-blue-600"
         >
           Cart ({cart.size})
         </button>
@@ -56,7 +56,7 @@ export default function Products() {
             className="border border-gray-700 bg-transparent transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg bg-white bg-opacity-10 p-2 rounded"
           >
             <div className="relative h-96">
-              <Link 
+              <Link
                 href={product.courseUrl}
                 className="absolute top-2 right-2 z-10 w-8 h-8"
                 target="_blank"

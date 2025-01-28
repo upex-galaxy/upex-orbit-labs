@@ -1,9 +1,12 @@
+import type { NextPage } from 'next';
 import OrbitLabsLogin from '@/components/ui/orbit-labs/login';
 
-export default function LoginPage() {
+const LoginPage: NextPage = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
+    <main className="flex justify-center items-center min-h-screen bg-gray-900">
       <OrbitLabsLogin />
-    </div>
+    </main>
   );
-}
+};
+
+export default LoginPage;
