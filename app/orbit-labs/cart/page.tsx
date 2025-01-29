@@ -119,6 +119,7 @@ export default function CartPage() {
                 Total: ${total.toFixed(2)}
               </p>
               <button
+                id="proceed-to-checkout"
                 onClick={continueCheckout}
                 className="mt-4 bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600"
               >
