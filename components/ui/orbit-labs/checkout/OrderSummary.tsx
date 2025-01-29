@@ -10,7 +10,7 @@ interface OrderSummaryProps {
 
 export const OrderSummary = ({ cartItems, total, onContinueShopping }: OrderSummaryProps) => {
   return (
-    <div className="w-96">
+    <div className="w-full lg:w-96">
       <button
         onClick={onContinueShopping}
         className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mb-4"

@@ -39,8 +39,12 @@ export default function CheckoutPage() {
   const [steps, setSteps] = useState(createCheckoutSteps());
   const [selectedBuyerIndex, setSelectedBuyerIndex] = useState<number>(-1);
   const [selectedPaymentIndex, setSelectedPaymentIndex] = useState<number>(-1);
-  const [editingBuyer, setEditingBuyer] = useState<BuyerFormPropsForm | null>(null);
-  const [editingPayment, setEditingPayment] = useState<PaymentMethod | null>(null);
+  const [editingBuyer, setEditingBuyer] = useState<BuyerFormPropsForm | null>(
+    null
+  );
+  const [editingPayment, setEditingPayment] = useState<PaymentMethod | null>(
+    null
+  );
 
   // Manejadores del modal de transacción
   const handleCloseModal = () => {
@@ -148,10 +152,12 @@ export default function CheckoutPage() {
           steps={steps}
           currentStep={currentStep}
           onStepClick={handleStepClick}
-          allowNavigation={currentStep !== 2 || (steps[0].isCompleted && steps[1].isCompleted)}
+          allowNavigation={
+            currentStep !== 2 || (steps[0].isCompleted && steps[1].isCompleted)
+          }
         />
 
-        <div className="flex gap-8">
+        <div className="flex flex-col lg:flex-row gap-8">
           <div className="flex-1">
             {/* Paso 1: Información del comprador */}
             {currentStep === 0 && (
@@ -164,8 +170,12 @@ export default function CheckoutPage() {
                     <div
                       key={index}
                       className={`p-4 bg-gray-700 rounded relative transition-all
-                        ${selectedBuyerIndex === index ? "ring-2 ring-blue-500" : "hover:bg-gray-600"}
-                        cursor-pointer`}
+                                  ${
+                                    selectedBuyerIndex === index
+                                      ? "ring-2 ring-blue-500"
+                                      : "hover:bg-gray-600"
+                                  }
+                                  cursor-pointer`}
                       onClick={() => setSelectedBuyerIndex(index)}
                     >
                       <div className="flex justify-between items-start">
@@ -232,13 +242,19 @@ export default function CheckoutPage() {
                     <div
                       key={index}
                       className={`p-4 bg-gray-700 rounded relative transition-all
-                        ${selectedPaymentIndex === index ? "ring-2 ring-blue-500" : "hover:bg-gray-600"}
-                        cursor-pointer`}
+                                  ${
+                                    selectedPaymentIndex === index
+                                      ? "ring-2 ring-blue-500"
+                                      : "hover:bg-gray-600"
+                                  }
+                                  cursor-pointer`}
                       onClick={() => setSelectedPaymentIndex(index)}
                     >
                       <div className="flex justify-between items-start">
                         <div>
-                          <p className="text-white font-medium">{method.cardType}</p>
+                          <p className="text-white font-medium">
+                            {method.cardType}
+                          </p>
                           <p className="text-gray-300">
                             Card ending in {method.cardNumber.slice(-4)}
                           </p>
@@ -318,15 +334,19 @@ export default function CheckoutPage() {
                     )}
                   </div>
                   <div>
-                    <h3 className="text-xl text-white mb-2">Selected Payment Method</h3>
+                    <h3 className="text-xl text-white mb-2">
+                      Selected Payment Method
+                    </h3>
                     {selectedPaymentIndex !== -1 && (
                       <div className="mb-4 p-4 bg-gray-700 rounded">
                         <p className="text-white font-medium">
                           {paymentMethods[selectedPaymentIndex].cardType}
                         </p>
                         <p className="text-gray-300">
-                          Card ending in {" "}
-                          {paymentMethods[selectedPaymentIndex].cardNumber.slice(-4)}
+                          Card ending in{" "}
+                          {paymentMethods[
+                            selectedPaymentIndex
+                          ].cardNumber.slice(-4)}
                         </p>
                         <p className="text-gray-300">
                           {paymentMethods[selectedPaymentIndex].cardHolder}
@@ -335,7 +355,7 @@ export default function CheckoutPage() {
                     )}
                   </div>
                   <button
-                    className="w-full px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors"
+                    className="flex-1 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors"
                     onClick={() => setShowTransactionModal(true)}
                   >
                     Confirm Order

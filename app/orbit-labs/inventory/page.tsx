@@ -8,7 +8,7 @@ export default function InventoryPage() {
   <div className="max-w-7xl mx-auto">
     <div className="flex items-center gap-1">
       <DropdownMenu />
-      <h1 className="text-3xl font-bold">Products - Practice UPEX</h1>
+      <h1 className="text-3xl font-bold">Inventory - Practice UPEX</h1>
     </div>
     <Products />
   </div>

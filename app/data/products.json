@@ -1,58 +1,58 @@
 [
     {
     "id": "1",
-    "name": "Curso de QA Software Testing (STLC)",
+    "name": "QA Software Testing Course (STLC)",
     "description": "QA: Software Testing Life Cycle (STLC)",
     "price": 50.00,
-    "image": "/images/qa_testing_card.png",
+    "image": "/images/qa_testing_card.png", 
     "courseUrl": "https://www.upexgalaxy.com/en/cursos/testing-qa-stlc"
     },
     {
     "id": "2",
-    "name": "Curso de Database Testing (SQL)",
-    "description": "Curso de Database Testing (SQL)",
+    "name": "Database Testing Course (SQL)",
+    "description": "Database Testing Course (SQL)",
     "price": 50.00,
     "image": "/images/SQL_card.png",
     "courseUrl": "https://www.upexgalaxy.com/en/cursos/db-testing-sql"
     },
     {
     "id": "3",
-    "name": "Curso de API Testing con POSTMAN",
-    "description": "Curso de API Testing con POSTMAN",
+    "name": "API Testing with POSTMAN Course",
+    "description": "API Testing with POSTMAN Course",
     "price": 50.00,
     "image": "/images/postman_card.png",
     "courseUrl": "https://www.upexgalaxy.com/en/cursos/api-testing-postman"
     },
     {
     "id": "4",
-    "name": "Curso de Cypress (e2e)",
-    "description": "Curso de Cypress (e2e)",
+    "name": "Cypress Course (e2e)",
+    "description": "Cypress Course (e2e)",
     "price": 50.00,
     "image": "/images/cypress_card.png",
     "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-cypress"
     },
     {
     "id": "5",
-    "name": "Curso de Playwright (e2e)",
-    "description": "Curso de Playwright (e2e)",
+    "name": "Playwright Course (e2e)",
+    "description": "Playwright Course (e2e)",
     "price": 50.00,
     "image": "/images/playwright_card.png",
     "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-playwright"
     },
     {
     "id": "6",
-    "name": "Curso de Selenium (e2e)",
-    "description": "Curso de Selenium (e2e)",
+    "name": "Selenium Course (e2e)",
+    "description": "Selenium Course (e2e)",
     "price": 50.00,
     "image": "/images/selenium_card.png",
     "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-selenium"
     },
     {
     "id": "7",
-    "name": "Curso de Performance con K6",
-    "description": "Curso de Performance con K6",
+    "name": "Performance Testing with K6 Course",
+    "description": "Performance Testing with K6 Course",
     "price": 50.00,
     "image": "/images/k6_card.png",
     "courseUrl": "https://www.upexgalaxy.com/en/cursos/performance-k6"
     }
-]
+ ]

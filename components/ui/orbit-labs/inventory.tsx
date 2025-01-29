@@ -8,6 +8,7 @@ import Link from "next/link";
 import "tailwindcss/tailwind.css";
 import { Product } from "../../../lib/utils";
 import productsData from "../../../app/data/products.json";
+import { ShoppingCart } from "lucide-react";
 
 const PRODUCTS: Product[] = productsData;
 
@@ -44,12 +45,16 @@ export default function Products() {
         <button
           id="view-cart"
           onClick={viewCart}
-          className="bg-blue-500 text-white px-8 py-2 rounded hover:bg-blue-600"
+          className="bg-blue-500 text-white px-8 py-2 rounded hover:bg-blue-600 flex items-center"
         >
+          <ShoppingCart className="w-4 h-4 mr-2" />
           Cart ({cart.size})
         </button>
       </div>
-      <div className="flex items-center justify-center grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
+      <div
+        id="card-container"
+        className="flex items-center justify-center grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8"
+      >
         {PRODUCTS.map((product) => (
           <Card
             key={product.id}
@@ -88,6 +93,7 @@ export default function Products() {
                   ${product.price}
                 </span>
                 <button
+                  id="add-to-cart"
                   onClick={() => updateCart(product.id)}
                   className={`px-6 py-2 rounded ${
                     cart.has(product.id)
