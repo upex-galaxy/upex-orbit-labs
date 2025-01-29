@@ -2,14 +2,26 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { BuyerInfo, PaymentMethod } from '../types/checkout';
 import productsData from '../../app/data/products.json';
+import { STORAGE_KEYS } from '../utils/constants';
 
 export const useCheckout = () => {
+  const router = useRouter();
+
   const [currentStep, setCurrentStep] = useState(0);
   const [cartItems, setCartItems] = useState<string[]>([]);
   const [total, setTotal] = useState(0);
-  const [buyerInfo, setBuyerInfo] = useState<BuyerInfo[]>([]);
-  const [paymentMethods, setPaymentMethods] = useState<PaymentMethod[]>([]);
-  const router = useRouter();
+  const [buyerInfo, setBuyerInfo] = useState<BuyerInfo[]>(() => {
+    if (typeof window !== 'undefined') {
+      return JSON.parse(localStorage.getItem(STORAGE_KEYS.BUYER_INFO) || '[]');
+    }
+    return [];
+  });
+  const [paymentMethods, setPaymentMethods] = useState<PaymentMethod[]>(() => {
+    if (typeof window !== 'undefined') {
+      return JSON.parse(localStorage.getItem(STORAGE_KEYS.PAYMENT_METHODS) || '[]');
+    }
+    return [];
+  });
 
   useEffect(() => {
     const savedCart = localStorage.getItem("cart");
@@ -19,6 +31,14 @@ export const useCheckout = () => {
       calculateTotal(Array.from(items));
     }
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEYS.BUYER_INFO, JSON.stringify(buyerInfo));
+  }, [buyerInfo]);
+  
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEYS.PAYMENT_METHODS, JSON.stringify(paymentMethods));
+  }, [paymentMethods]);
 
   const calculateTotal = (items: string[]) => {
     const sum = items.reduce((acc, id) => {

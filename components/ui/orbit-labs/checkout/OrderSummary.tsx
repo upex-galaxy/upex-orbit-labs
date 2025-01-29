@@ -15,7 +15,7 @@ export const OrderSummary = ({ cartItems, total, onContinueShopping }: OrderSumm
         onClick={onContinueShopping}
         className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mb-4"
       >
-        Continue Shopping
+        Back to shopping
       </button>
       <Card className="bg-gray-800">
         <CardContent className="p-6">

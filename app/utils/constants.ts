@@ -46,3 +46,11 @@ export const createCheckoutSteps = () => [
   { title: "Payment Method", isCompleted: false },
   { title: "Confirmation", isCompleted: false },
 ];
+
+export const STORAGE_KEYS = {
+  BUYER_INFO: 'orbitlabs_buyer_info',
+  PAYMENT_METHODS: 'orbitlabs_payment_methods'
+} as const;
+
+export const savedBuyerInfo = JSON.parse(localStorage.getItem(STORAGE_KEYS.BUYER_INFO) || '[]');
+export const savedPaymentMethods = JSON.parse(localStorage.getItem(STORAGE_KEYS.PAYMENT_METHODS) || '[]');
