@@ -28,6 +28,15 @@ export interface BuyerInfo {
   phone: string;
   country: string;
 }
+
+
+export interface StepIndicatorProps {
+  steps: CheckoutStep[];
+  currentStep: number;
+  onStepClick?: (stepIndex: number) => void;
+  allowNavigation?: boolean;
+}
+
 export type BuyerFormProps = {
 
   initialData: BuyerInfo | null;
@@ -38,9 +47,29 @@ export type BuyerFormProps = {
 
 };
 
-export interface StepIndicatorProps {
-  steps: CheckoutStep[];
-  currentStep: number;
-  onStepClick?: (stepIndex: number) => void;
-  allowNavigation?: boolean;
+export interface BuyerFormPropsForm {
+
+  initialData?: BuyerInfo | null;
+
+  onSubmit: (data: BuyerInfo) => void;
+
+  onCancel: () => void;
+
+}
+export interface BuyerInfoForm {
+  initialData?: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    country: string;
+  };
+  onSubmit: (data: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    country: string;
+  }) => void;
+  onCancel: () => void;
 }

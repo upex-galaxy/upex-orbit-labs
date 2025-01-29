@@ -9,7 +9,7 @@ import { PaymentForm } from '../../forms/PaymentForm';
 import { OrderSummary } from '../../../components/ui/orbit-labs/checkout/OrderSummary';
 import TransactionModal from "./TransactionModal";
 import { Pencil, Trash2 } from 'lucide-react';
-import { BuyerInfo, PaymentMethod } from '../../types/checkout';
+import { BuyerInfo as BuyerFormPropsForm, PaymentMethod } from '../../types/checkout';
 
 export default function CheckoutPage() {
   const [showTransactionModal, setShowTransactionModal] = useState(false);
@@ -18,7 +18,7 @@ export default function CheckoutPage() {
   const [steps, setSteps] = useState(createCheckoutSteps());
   const [selectedBuyerIndex, setSelectedBuyerIndex] = useState<number>(-1);
   const [selectedPaymentIndex, setSelectedPaymentIndex] = useState<number>(-1);
-  const [editingBuyer, setEditingBuyer] = useState<BuyerInfo | null>(null);
+  const [editingBuyer, setEditingBuyer] = useState<BuyerFormPropsForm | null>(null);
   const [editingPayment, setEditingPayment] = useState<PaymentMethod | null>(null);
   
   const {
@@ -69,7 +69,7 @@ export default function CheckoutPage() {
     }
   };
 
-  const handleEditBuyer = (buyer: BuyerInfo) => {
+  const handleEditBuyer = (buyer: BuyerFormPropsForm) => {
     setEditingBuyer(buyer);
     setShowBuyerForm(true);
   };
@@ -285,7 +285,7 @@ export default function CheckoutPage() {
 
       {showBuyerForm && (
         <BuyerForm
-          initialData={editingBuyer}
+          initialData={editingBuyer || undefined}
           onSubmit={(data) => {
             if (editingBuyer) {
               const newBuyerInfo = [...buyerInfo];
