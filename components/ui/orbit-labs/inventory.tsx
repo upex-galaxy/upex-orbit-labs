@@ -9,12 +9,22 @@ import "tailwindcss/tailwind.css";
 import { Product } from "../../../lib/utils";
 import productsData from "../../../app/data/products.json";
 import { ShoppingCart } from "lucide-react";
+import { useLanguage } from "../../../app/context/LanguageContext";
 
-const PRODUCTS: Product[] = productsData;
+interface ProductsData {
+  english: Product[];
+  spanish: Product[];
+}
+
+const PRODUCTS_DATA: ProductsData = productsData;
 
 export default function Products() {
   const router = useRouter();
   const [cart, setCart] = useState<Set<string>>(new Set());
+  const { language, t, isLoading } = useLanguage();
+
+  // Seleccionar los productos según el idioma actual
+  const PRODUCTS = language === 'en' ? PRODUCTS_DATA.english : PRODUCTS_DATA.spanish;
 
   useEffect(() => {
     const savedCart = localStorage.getItem("cart");
@@ -38,6 +48,10 @@ export default function Products() {
     router.push("/orbit-labs/cart");
   };
 
+  if (isLoading) {
+    return <div className="min-h-screen p-8 bg-transparent">Loading...</div>;
+  }
+
   return (
     <div className="min-h-screen p-8 bg-transparent">
       <div className="flex justify-between items-center mb-4">
@@ -48,7 +62,7 @@ export default function Products() {
           className="bg-blue-500 text-white px-8 py-2 rounded hover:bg-blue-600 flex items-center"
         >
           <ShoppingCart className="w-4 h-4 mr-2" />
-          Cart ({cart.size})
+          {t('pages.inventory.buttons.cart')} ({cart.size})
         </button>
       </div>
       <div
@@ -101,7 +115,9 @@ export default function Products() {
                       : "bg-blue-500 hover:bg-blue-600"
                   } text-white`}
                 >
-                  {cart.has(product.id) ? "Remove" : "Add to Cart"}
+                  {cart.has(product.id) 
+                    ? t('pages.inventory.buttons.remove')
+                    : t('pages.inventory.buttons.addToCart')}
                 </button>
               </div>
             </CardContent>

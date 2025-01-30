@@ -5,7 +5,12 @@ import { Card, CardContent } from "@/components/ui/orbit-labs/card";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import productsData from "../../../app/data/products.json";
-import DropdownMenu from "../../../app/orbit-labs/login/dropdownMenu";
+import { useLanguage } from "../../context/LanguageContext";
+
+interface ProductsData {
+  english: Product[];
+  spanish: Product[];
+}
 
 interface Product {
   id: string;
@@ -16,12 +21,15 @@ interface Product {
   courseUrl: string;
 }
 
-const PRODUCTS: Product[] = productsData;
+const PRODUCTS_DATA: ProductsData = productsData;
 
 export default function CartPage() {
   const router = useRouter();
+  const { language, t } = useLanguage();
   const [cartItems, setCartItems] = useState<string[]>([]);
   const [total, setTotal] = useState(0);
+
+  const PRODUCTS = language === 'en' ? PRODUCTS_DATA.english : PRODUCTS_DATA.spanish;
 
   useEffect(() => {
     const savedCart = localStorage.getItem("cart");
@@ -50,6 +58,7 @@ export default function CartPage() {
   const continueShopping = () => {
     router.push("/orbit-labs/inventory");
   };
+
   const continueCheckout = () => {
     router.push("/orbit-labs/checkout");
   };
@@ -59,20 +68,19 @@ export default function CartPage() {
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <div className="flex items-center gap-1">
-            <DropdownMenu />
-            <h1 className="text-3xl font-bold text-white">Shopping Cart</h1>
+            <h1 className="text-3xl font-bold text-white">{t('pages.cart.title')}</h1>
           </div>
           <button
             id="continue-shopping"
             onClick={continueShopping}
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
           >
-            Continue Shopping
+            {t('pages.cart.buttons.continueShopping')}
           </button>
         </div>
 
         {cartItems.length === 0 ? (
-          <p className="text-center text-gray-300">Your cart is empty</p>
+          <p className="text-center text-gray-300">{t('pages.cart.emptyCartMessage')}</p>
         ) : (
           <>
             {cartItems.map((id) => {
@@ -107,7 +115,7 @@ export default function CartPage() {
                         onClick={() => removeFromCart(product.id)}
                         className="text-red-500 hover:text-red-600"
                       >
-                        Remove
+                        {t('pages.inventory.buttons.remove')}
                       </button>
                     </div>
                   </CardContent>
@@ -123,7 +131,7 @@ export default function CartPage() {
                 onClick={continueCheckout}
                 className="mt-4 bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600"
               >
-                Proceed to Checkout
+                {t('pages.cart.buttons.proceedToCheckout')}
               </button>
             </div>
           </>

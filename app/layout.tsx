@@ -1,6 +1,7 @@
 import "./globals.css"
 import { Inter } from "next/font/google"
 import Header from "./components/Header"
+import { LanguageProvider } from "./context/LanguageContext"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,10 +20,11 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-gradient-to-b from-[#020B2D] via-[#1E0B4A] to-[#0A3A7E] text-white min-h-screen`}
       >
-        <Header />
-        <main className="container mx-auto px-4 py-8">{children}</main>
+        <LanguageProvider>
+          <Header />
+          <main className="container mx-auto px-4 py-8">{children}</main>
+        </LanguageProvider>
       </body>
     </html>
   )
 }
-

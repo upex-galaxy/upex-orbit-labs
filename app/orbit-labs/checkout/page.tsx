@@ -161,13 +161,17 @@ export default function CheckoutPage() {
           <div className="flex-1">
             {/* Paso 1: Información del comprador */}
             {currentStep === 0 && (
-              <div className="bg-gray-800 p-6 rounded-lg">
-                <h2 className="text-2xl font-bold text-white mb-4">
+              <div className="flex-1 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 transition-colors">
+                <h3
+                  data-testid="container"
+                  className="text-2xl font-bold text-red mb-4"
+                >
                   Buyer Information
-                </h2>
+                </h3>
                 <div className="space-y-4 mb-6">
                   {buyerInfo.map((info, index) => (
                     <div
+                      id={`buyer-${index}`}
                       key={index}
                       className={`p-4 bg-gray-700 rounded relative transition-all
                                   ${
@@ -211,6 +215,7 @@ export default function CheckoutPage() {
                 </div>
                 <div className="space-y-4">
                   <button
+                    data-testid="add-buyer-button"
                     onClick={() => {
                       setEditingBuyer(null);
                       setShowBuyerForm(true);
@@ -234,12 +239,16 @@ export default function CheckoutPage() {
             {/* Paso 2: Método de pago */}
             {currentStep === 1 && (
               <div className="bg-gray-800 p-6 rounded-lg">
-                <h2 className="text-2xl font-bold text-white mb-4">
+                <h3
+                  data-testid="container"
+                  className="text-2xl font-bold text-white mb-4"
+                >
                   Payment Methods
-                </h2>
+                </h3>
                 <div className="space-y-4 mb-6">
                   {paymentMethods.map((method, index) => (
                     <div
+                      id={`payment-method-${index}`}
                       key={index}
                       className={`p-4 bg-gray-700 rounded relative transition-all
                                   ${
@@ -310,9 +319,12 @@ export default function CheckoutPage() {
             {/* Paso 3: Confirmación */}
             {currentStep === 2 && (
               <div className="bg-gray-800 p-6 rounded-lg">
-                <h2 className="text-2xl font-bold text-white mb-4">
+                <h3
+                  data-testid="container"
+                  className="text-2xl font-bold text-white mb-4"
+                >
                   Order Confirmation
-                </h2>
+                </h3>
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-xl text-white mb-2">Selected Buyer</h3>

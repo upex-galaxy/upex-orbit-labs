@@ -1,53 +1,88 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
-
-// const menuItems = [
-//   { name: "Buttons", href: "/buttons" },
-//   { name: "Dropdowns", href: "/dropdowns" },
-//   { name: "Sliders", href: "/sliders" },
-//   { name: "Forms", href: "/forms" },
-//   { name: "Drag and Drop", href: "/drag-and-drop" },
-//   { name: "Upload/Download", href: "/upload-download" },
-//   { name: "Static Table", href: "/static-table" },
-// ]
+import { useRouter } from "next/navigation"
+import { Menu } from "lucide-react"
+import { useLanguage } from "../context/LanguageContext"
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const router = useRouter()
+  const menuRef = useRef<HTMLDivElement>(null)
+  const { language, setLanguage, t, isLoading } = useLanguage()
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [isOpen])
+
+  const handleLogout = () => {
+    router.push("/orbit-labs")
+  }
+
+  const handleLanguage = () => {
+    setLanguage(language === 'en' ? 'es' : 'en')
+    setIsOpen(false)
+  }
+
+  if (isLoading) {
+    return (
+      <header className="bg-[#020B2D] shadow-md">
+        <div className="container flex-1 px-4 py-4 flex flex-wrap justify-between items-center">
+          <div className="text-xl sm:text-2xl font-bold text-[#00FFFF]">
+            Loading...
+          </div>
+        </div>
+      </header>
+    )
+  }
 
   return (
     <header className="bg-[#020B2D] shadow-md">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-[#00FFFF]">
-          QA Practice
+      <div className="container flex-1 px-4 py-4 flex flex-wrap justify-between items-center">
+        <Link href="/" className="text-xl sm:text-2xl font-bold text-[#00FFFF]">
+          {t('pages.headers.title')}
         </Link>
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="text-white focus:outline-none focus:text-[#00FFFF]"
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-      {isMenuOpen && (
-        <nav className="container mx-auto px-4 py-4">
-          {/* <ul className="space-y-2">
-            {menuItems.map((item) => (
-              <li key={item.name}>
-                <Link
-                  href={item.href}
-                  className="block py-2 text-white hover:text-[#00FFFF] transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
+        <div className="relative" ref={menuRef}>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-1 sm:p-2 text-white hover:bg-white hover:bg-opacity-10 rounded-md transition-colors duration-200"
+          >
+            <Menu size={18} className="sm:w-5 sm:h-5" />
+          </button>
+
+          {isOpen && (
+            <div className="absolute right-0 mt-2 w-40 sm:w-48 rounded-md shadow-lg bg-gray-800 ring-1 ring-black ring-opacity-5">
+              <div className="py-1">
+                <button
+                  onClick={handleLanguage}
+                  className="w-full text-left px-3 sm:px-4 py-2 text-sm sm:text-base text-white hover:bg-gray-700 transition-colors duration-200"
                 >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul> */}
-        </nav>
-      )}
+                  {language === 'en' ? 'Español' : 'English'}
+                </button>
+                <button
+                  onClick={handleLogout}
+                  className="w-full text-left px-3 sm:px-4 py-2 text-sm sm:text-base text-white hover:bg-gray-700 transition-colors duration-200"
+                >
+                  {t('pages.headers.buttons.logout')}
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </header>
   )
 }
-

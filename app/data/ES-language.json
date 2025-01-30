@@ -1,0 +1,122 @@
+{
+    "pages": {
+      "login": {
+        "title": "Orbit Labs",
+        "labels": {
+          "username": "Usuario",
+          "password": "Contraseña"
+        },
+        "buttons": {
+          "login": "Iniciar Sesión"
+        }
+      },
+      "headers": {
+        "title": "Práctica QA",
+        "buttons": {
+          "logout": "Cerrar Sesión",
+          "language": "Idioma"
+        }
+      },
+      "inventory": {
+        "title": "Inventario - Práctica UPEX",
+        "buttons": {
+          "addToCart": "Agregar al Carrito",
+          "remove": "Eliminar",
+          "cart": "Carrito"
+        }
+      },
+      "cart": {
+        "title": "Carrito de Compras",
+        "buttons": {
+          "continueShopping": "Continuar Comprando",
+          "proceedToCheckout": "Proceder al Pago"
+        },
+        "emptyCartMessage": "Tu carrito está vacío"
+      },
+      "checkout": {
+        "steps": [
+          {
+            "title": "Información del Comprador",
+            "buttons": {
+              "addNewBuyer": "Agregar Nuevo Comprador",
+              "continueToPayment": "Continuar al Pago"
+            }
+          },
+          {
+            "title": "Métodos de Pago",
+            "buttons": {
+              "addPaymentMethod": "Agregar Método de Pago",
+              "continueToConfirmation": "Continuar a la Confirmación"
+            }
+          },
+          {
+            "title": "Confirmación del Pedido",
+            "buttons": {
+              "confirmOrder": "Confirmar Pedido"
+            }
+          }
+        ]
+      }
+    },
+    "forms": {
+      "buyerForm": {
+        "title": {
+          "add": "Agregar Información del Comprador",
+          "edit": "Editar Información del Comprador"
+        },
+        "defaults": {
+          "firstName": "Anónimo",
+          "lastName": "Perezoso",
+          "email": "anonimo@ejemplo.com",
+          "phone": "N/D",
+          "country": "Tierrafloja"
+        },
+        "placeholders": {
+          "firstName": "Nombre",
+          "lastName": "Apellido",
+          "email": "Correo Electrónico",
+          "phone": "Número de Teléfono",
+          "country": "País"
+        },
+        "buttons": {
+          "cancel": "Cancelar",
+          "submit": {
+            "add": "Agregar Comprador",
+            "edit": "Guardar Cambios"
+          }
+        }
+      },
+      "paymentForm": {
+        "title": "Agregar Método de Pago",
+        "placeholders": {
+          "cardNumber": "Número de Tarjeta",
+          "cardHolder": "Nombre del Titular",
+          "petName": "Nombre de la Mascota"
+        },
+        "buttons": {
+          "cancel": "Cancelar",
+          "submit": "Agregar"
+        },
+        "errors": {
+          "cardNumber": "Número de tarjeta inválido",
+          "cardHolder": "Solo se permiten letras"
+        }
+      }
+    },
+    "transactionModal": {
+      "title": "Asistente de Transacción",
+      "messages": [
+        "Analizando tu solicitud de compra... 🔍",
+        "¡Oh! He detectado un pequeño problema con tu cuenta bancaria 🏦",
+        "Parece que tus fondos son insuficientes para esta transacción... 💸",
+        "¡Pero no te preocupes, tengo una solución! 💡",
+        "Déjame revisar las políticas de UpexGalaxy... 📚",
+        "*Accediendo a la tarjeta corporativa de UpexGalaxy* 💳",
+        "¡Excelente! He procesado el pago con la tarjeta corporativa 🎉",
+        "Tu compra se ha completado exitosamente ✨"
+      ],
+      "buttons": {
+        "accept": "Aceptar"
+      }
+    }
+  }

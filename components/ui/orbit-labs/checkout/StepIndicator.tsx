@@ -15,14 +15,15 @@ export const StepIndicator = ({
         <div
           key={index}
           onClick={() => isClickable && onStepClick?.(index)}
+          id={`step-${index}`}
           className={`
-            flex-1 text-center p-4 
+            w-full text-center p-6 
             ${
               currentStep === index
-                ? "bg-blue-500 text-white"
+                ? "flex-1 bg-blue-500 text-white text-sm sm:text-lg px-4 py-2 rounded hover:bg-blue-600 transition-colors"
                 : step.isCompleted
-                ? "bg-green-500 text-white"
-                : "bg-gray-700 text-gray-300"
+                ? "flex-1 bg-green-600 text-white text-base sm:text-lg px-4 py-2 rounded hover:bg-green-600 transition-colors"
+                : "flex-1 bg-gray-700 text-gray-300 text-base sm:text-lg px-4 py-2 rounded hover:bg-gray-600 transition-colors"
             }
             ${
               isClickable ? "cursor-pointer hover:opacity-90" : "cursor-default"

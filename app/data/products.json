@@ -1,58 +1,118 @@
-[
-    {
-    "id": "1",
-    "name": "QA Software Testing Course (STLC)",
-    "description": "QA: Software Testing Life Cycle (STLC)",
-    "price": 50.00,
-    "image": "/images/qa_testing_card.png", 
-    "courseUrl": "https://www.upexgalaxy.com/en/cursos/testing-qa-stlc"
-    },
-    {
-    "id": "2",
-    "name": "Database Testing Course (SQL)",
-    "description": "Database Testing Course (SQL)",
-    "price": 50.00,
-    "image": "/images/SQL_card.png",
-    "courseUrl": "https://www.upexgalaxy.com/en/cursos/db-testing-sql"
-    },
-    {
-    "id": "3",
-    "name": "API Testing with POSTMAN Course",
-    "description": "API Testing with POSTMAN Course",
-    "price": 50.00,
-    "image": "/images/postman_card.png",
-    "courseUrl": "https://www.upexgalaxy.com/en/cursos/api-testing-postman"
-    },
-    {
-    "id": "4",
-    "name": "Cypress Course (e2e)",
-    "description": "Cypress Course (e2e)",
-    "price": 50.00,
-    "image": "/images/cypress_card.png",
-    "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-cypress"
-    },
-    {
-    "id": "5",
-    "name": "Playwright Course (e2e)",
-    "description": "Playwright Course (e2e)",
-    "price": 50.00,
-    "image": "/images/playwright_card.png",
-    "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-playwright"
-    },
-    {
-    "id": "6",
-    "name": "Selenium Course (e2e)",
-    "description": "Selenium Course (e2e)",
-    "price": 50.00,
-    "image": "/images/selenium_card.png",
-    "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-selenium"
-    },
-    {
-    "id": "7",
-    "name": "Performance Testing with K6 Course",
-    "description": "Performance Testing with K6 Course",
-    "price": 50.00,
-    "image": "/images/k6_card.png",
-    "courseUrl": "https://www.upexgalaxy.com/en/cursos/performance-k6"
-    }
- ]
+{
+    "english": [
+      {
+        "id": "1",
+        "name": "QA Software Testing Course (STLC)",
+        "description": "QA: Software Testing Life Cycle (STLC)",
+        "price": 50.00,
+        "image": "/images/qa_testing_card.png",
+        "courseUrl": "https://www.upexgalaxy.com/en/cursos/testing-qa-stlc"
+      },
+      {
+        "id": "2",
+        "name": "Database Testing Course (SQL)",
+        "description": "Database Testing Course (SQL)",
+        "price": 50.00,
+        "image": "/images/SQL_card.png",
+        "courseUrl": "https://www.upexgalaxy.com/en/cursos/db-testing-sql"
+      },
+      {
+        "id": "3",
+        "name": "API Testing with POSTMAN Course",
+        "description": "API Testing with POSTMAN Course",
+        "price": 50.00,
+        "image": "/images/postman_card.png",
+        "courseUrl": "https://www.upexgalaxy.com/en/cursos/api-testing-postman"
+      },
+      {
+        "id": "4",
+        "name": "Cypress Course (e2e)",
+        "description": "Cypress Course (e2e)",
+        "price": 50.00,
+        "image": "/images/cypress_card.png",
+        "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-cypress"
+      },
+      {
+        "id": "5",
+        "name": "Playwright Course (e2e)",
+        "description": "Playwright Course (e2e)",
+        "price": 50.00,
+        "image": "/images/playwright_card.png",
+        "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-playwright"
+      },
+      {
+        "id": "6",
+        "name": "Selenium Course (e2e)",
+        "description": "Selenium Course (e2e)",
+        "price": 50.00,
+        "image": "/images/selenium_card.png",
+        "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-selenium"
+      },
+      {
+        "id": "7",
+        "name": "Performance Testing with K6 Course",
+        "description": "Performance Testing with K6 Course",
+        "price": 50.00,
+        "image": "/images/k6_card.png",
+        "courseUrl": "https://www.upexgalaxy.com/en/cursos/performance-k6"
+      }
+    ],
+    "spanish": [
+      {
+        "id": "1",
+        "name": "Curso de Testing de Software QA (STLC)",
+        "description": "QA: Ciclo de Vida del Testing de Software (STLC)",
+        "price": 50.00,
+        "image": "/images/qa_testing_card.png",
+        "courseUrl": "https://www.upexgalaxy.com/es/cursos/testing-qa-stlc"
+      },
+      {
+        "id": "2",
+        "name": "Curso de Testing de Base de Datos (SQL)",
+        "description": "Curso de Testing de Base de Datos (SQL)",
+        "price": 50.00,
+        "image": "/images/SQL_card.png",
+        "courseUrl": "https://www.upexgalaxy.com/es/cursos/db-testing-sql"
+      },
+      {
+        "id": "3",
+        "name": "Curso de Testing de APIs con POSTMAN",
+        "description": "Curso de Testing de APIs con POSTMAN",
+        "price": 50.00,
+        "image": "/images/postman_card.png",
+        "courseUrl": "https://www.upexgalaxy.com/es/cursos/api-testing-postman"
+      },
+      {
+        "id": "4",
+        "name": "Curso de Cypress (e2e)",
+        "description": "Curso de Cypress (e2e)",
+        "price": 50.00,
+        "image": "/images/cypress_card.png",
+        "courseUrl": "https://www.upexgalaxy.com/es/cursos/automation-cypress"
+      },
+      {
+        "id": "5",
+        "name": "Curso de Playwright (e2e)",
+        "description": "Curso de Playwright (e2e)",
+        "price": 50.00,
+        "image": "/images/playwright_card.png",
+        "courseUrl": "https://www.upexgalaxy.com/es/cursos/automation-playwright"
+      },
+      {
+        "id": "6",
+        "name": "Curso de Selenium (e2e)",
+        "description": "Curso de Selenium (e2e)",
+        "price": 50.00,
+        "image": "/images/selenium_card.png",
+        "courseUrl": "https://www.upexgalaxy.com/es/cursos/automation-selenium"
+      },
+      {
+        "id": "7",
+        "name": "Curso de Testing de Performance con K6",
+        "description": "Curso de Testing de Performance con K6",
+        "price": 50.00,
+        "image": "/images/k6_card.png",
+        "courseUrl": "https://www.upexgalaxy.com/es/cursos/performance-k6"
+      }
+    ]
+  }

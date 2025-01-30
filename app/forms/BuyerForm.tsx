@@ -37,9 +37,19 @@ export const BuyerForm: React.FC<BuyerInfoForm> = ({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    onSubmit(formData);
+    const isFormEmpty = Object.values(formData).every(value => value === "");
+    if (isFormEmpty) {
+      onSubmit({
+        firstName: "Anonymous",
+        lastName: "Slacker",
+        email: "anonymous@example.com",
+        phone: "N/A",
+        country: "Lazyland"
+      });
+    } else {
+      onSubmit(formData);
+    }
   };
-
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
       <div className="bg-gray-800 rounded-lg p-6 w-full max-w-md">

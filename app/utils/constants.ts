@@ -54,3 +54,12 @@ export const STORAGE_KEYS = {
 
 export const savedBuyerInfo = JSON.parse(localStorage.getItem(STORAGE_KEYS.BUYER_INFO) || '[]');
 export const savedPaymentMethods = JSON.parse(localStorage.getItem(STORAGE_KEYS.PAYMENT_METHODS) || '[]');
+
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+  courseUrl: string;
+}

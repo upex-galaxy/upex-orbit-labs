@@ -1,0 +1,122 @@
+{
+  "pages": {
+    "login": {
+      "title": "Orbit Labs",
+      "labels": {
+        "username": "Username",
+        "password": "Password"
+      },
+      "buttons": {
+        "login": "Login"
+      }
+    },
+    "headers": {
+      "title": "QA Practice",
+      "buttons": {
+        "logout": "Logout",
+        "language": "Language"
+      }
+    },
+    "inventory": {
+      "title": "Inventory - Practice UPEX",
+      "buttons": {
+        "addToCart": "Add to Cart",
+        "remove": "Remove",
+        "cart": "Cart"
+      }
+    },
+    "cart": {
+      "title": "Shopping Cart",
+      "buttons": {
+        "continueShopping": "Continue Shopping",
+        "proceedToCheckout": "Proceed to Checkout"
+      },
+      "emptyCartMessage": "Your cart is empty"
+    },
+    "checkout": {
+      "steps": [
+        {
+          "title": "Buyer Information",
+          "buttons": {
+            "addNewBuyer": "Add New Buyer",
+            "continueToPayment": "Continue to Payment"
+          }
+        },
+        {
+          "title": "Payment Methods",
+          "buttons": {
+            "addPaymentMethod": "Add Payment Method",
+            "continueToConfirmation": "Continue to Confirmation"
+          }
+        },
+        {
+          "title": "Order Confirmation",
+          "buttons": {
+            "confirmOrder": "Confirm Order"
+          }
+        }
+      ]
+    }
+  },
+  "forms": {
+    "buyerForm": {
+      "title": {
+        "add": "Add Buyer Information",
+        "edit": "Edit Buyer Information"
+      },
+      "defaults": {
+        "firstName": "Anonymous",
+        "lastName": "Slacker",
+        "email": "anonymous@example.com",
+        "phone": "N/A",
+        "country": "Lazyland"
+      },
+      "placeholders": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "phone": "Phone Number",
+        "country": "Country"
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "submit": {
+          "add": "Add Buyer",
+          "edit": "Save Changes"
+        }
+      }
+    },
+    "paymentForm": {
+      "title": "Add Payment Method",
+      "placeholders": {
+        "cardNumber": "Card Number",
+        "cardHolder": "Cardholder Name",
+        "petName": "Pet Name"
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "submit": "Add"
+      },
+      "errors": {
+        "cardNumber": "Invalid card number",
+        "cardHolder": "Only letters allowed"
+      }
+    }
+  },
+  "transactionModal": {
+    "title": "Transaction Assistant",
+    "messages": [
+      "Analyzing your purchase request... 🔍",
+      "Oh! I detected a small issue with your bank account 🏦",
+      "It seems your funds are insufficient for this transaction... 💸",
+      "But don't worry, I have a solution! 💡",
+      "Let me check UpexGalaxy's policies... 📚",
+      "*Accessing UpexGalaxy's corporate card* 💳",
+      "Excellent! I've processed the payment with the corporate card 🎉",
+      "Your purchase has been successfully completed ✨"
+    ],
+    "buttons": {
+      "accept": "Accept"
+    }
+  }
+}

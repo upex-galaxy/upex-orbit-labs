@@ -3,8 +3,11 @@ import { useRouter } from 'next/navigation';
 import { BuyerInfo, PaymentMethod } from '../types/checkout';
 import productsData from '../../app/data/products.json';
 import { STORAGE_KEYS } from '../utils/constants';
+import { useLanguage } from "../context/LanguageContext";
 
 export const useCheckout = () => {
+  const { language } = useLanguage();
+  const PRODUCTS = language === 'en' ? productsData.english : productsData.spanish;
   const router = useRouter();
 
   const [currentStep, setCurrentStep] = useState(0);
@@ -42,7 +45,7 @@ export const useCheckout = () => {
 
   const calculateTotal = (items: string[]) => {
     const sum = items.reduce((acc, id) => {
-      const product = productsData.find((p) => p.id === id);
+      const product = PRODUCTS.find((p) => p.id === id);
       return acc + (product?.price || 0);
     }, 0);
     setTotal(sum);
