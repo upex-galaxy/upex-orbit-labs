@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Card, CardContent } from "./card";
 import Image from "next/image";
@@ -8,7 +6,7 @@ import Link from "next/link";
 import "tailwindcss/tailwind.css";
 import { Product } from "../../../lib/utils";
 import productsData from "../../../app/data/products.json";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "../../../app/context/LanguageContext";
 
 interface ProductsData {
@@ -16,15 +14,27 @@ interface ProductsData {
   spanish: Product[];
 }
 
+const PRODUCTS_PER_PAGE = 6;
 const PRODUCTS_DATA: ProductsData = productsData;
 
 export default function Products() {
   const router = useRouter();
   const [cart, setCart] = useState<Set<string>>(new Set());
+  const [currentPage, setCurrentPage] = useState(1);
   const { language, t, isLoading } = useLanguage();
 
   // Seleccionar los productos según el idioma actual
   const PRODUCTS = language === 'en' ? PRODUCTS_DATA.english : PRODUCTS_DATA.spanish;
+  
+  // Calcular el número total de páginas
+  const totalPages = Math.ceil(PRODUCTS.length / PRODUCTS_PER_PAGE);
+
+  // Obtener los productos de la página actual
+  const getCurrentPageProducts = () => {
+    const startIndex = (currentPage - 1) * PRODUCTS_PER_PAGE;
+    const endIndex = startIndex + PRODUCTS_PER_PAGE;
+    return PRODUCTS.slice(startIndex, endIndex);
+  };
 
   useEffect(() => {
     const savedCart = localStorage.getItem("cart");
@@ -48,14 +58,20 @@ export default function Products() {
     router.push("/orbit-labs/cart");
   };
 
+  const handlePageChange = (newPage: number) => {
+    if (newPage >= 1 && newPage <= totalPages) {
+      setCurrentPage(newPage);
+    }
+  };
+
   if (isLoading) {
     return <div className="min-h-screen p-8 bg-transparent">Loading...</div>;
   }
 
   return (
     <div className="min-h-screen p-8 bg-transparent">
-      <div className="flex justify-between items-center mb-4">
-        <div className="flex-1" />
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-2xl font-bold text-white">Inventory - Practice UPEX</h1>
         <button
           id="view-cart"
           onClick={viewCart}
@@ -65,11 +81,12 @@ export default function Products() {
           {t('pages.inventory.buttons.cart')} ({cart.size})
         </button>
       </div>
+
       <div
         id="card-container"
-        className="flex items-center justify-center grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8"
       >
-        {PRODUCTS.map((product) => (
+        {getCurrentPageProducts().map((product) => (
           <Card
             key={product.id}
             className="border border-gray-700 bg-transparent transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg bg-white bg-opacity-10 p-2 rounded"
@@ -123,6 +140,49 @@ export default function Products() {
             </CardContent>
           </Card>
         ))}
+      </div>
+
+      {/* Paginación */}
+      <div className="flex justify-center items-center space-x-4">
+        <button
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          className={`p-2 rounded-full ${
+            currentPage === 1
+              ? 'text-gray-500 cursor-not-allowed'
+              : 'text-white hover:bg-gray-700'
+          }`}
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        
+        <div className="flex space-x-2">
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            <button
+              key={page}
+              onClick={() => handlePageChange(page)}
+              className={`px-4 py-2 rounded ${
+                currentPage === page
+                  ? 'bg-blue-500 text-white'
+                  : 'text-white hover:bg-gray-700'
+              }`}
+            >
+              {page}
+            </button>
+          ))}
+        </div>
+
+        <button
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className={`p-2 rounded-full ${
+            currentPage === totalPages
+              ? 'text-gray-500 cursor-not-allowed'
+              : 'text-white hover:bg-gray-700'
+          }`}
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
       </div>
     </div>
   );
