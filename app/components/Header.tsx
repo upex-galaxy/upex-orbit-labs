@@ -42,7 +42,7 @@ export default function Header() {
   if (isLoading) {
     return (
       <header className="bg-[#020B2D] shadow-md">
-        <div className="container flex-1 px-4 py-4 flex flex-wrap justify-between items-center">
+        <div className="container mx-auto max-w-7xl flex-1 px-4 py-4 flex flex-wrap justify-between items-center">
           <div className="text-xl sm:text-2xl font-bold text-[#00FFFF]">
             Loading...
           </div>
@@ -53,7 +53,7 @@ export default function Header() {
 
   return (
     <header className="bg-[#020B2D] shadow-md">
-      <div className="container flex-1 px-4 py-4 flex flex-wrap justify-between items-center">
+      <div className="container mx-auto max-w-7xl flex-1 px-4 py-4 flex flex-wrap justify-between items-center">
         <span className="text-xl sm:text-2xl font-bold text-[#00FFFF]">
           {t('pages.headers.title')}
         </span>
