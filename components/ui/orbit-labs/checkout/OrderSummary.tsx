@@ -25,6 +25,7 @@ interface OrderSummaryProps {
   onContinueShopping: () => void;
 }
 
+
 export const OrderSummary = ({ cartItems, total, onContinueShopping }: OrderSummaryProps) => {
   const { language, t } = useLanguage();
   const PRODUCTS = language === 'en' ? PRODUCTS_DATA.english : PRODUCTS_DATA.spanish;

@@ -29,7 +29,7 @@ export default function Header() {
   }, [isOpen])
 
   const handleLogout = () => {
-    router.push("/orbit-labs")
+    router.push("/")
   }
 
   const handleLanguage = () => {

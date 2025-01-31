@@ -13,9 +13,9 @@ export const AUTH_MESSAGES = {
 } as const;
 
 export const CHECKOUT_STEPS = [
-  { title: "Buyer Information", isCompleted: false },
-  { title: "Payment Method", isCompleted: false },
-  { title: "Confirmation", isCompleted: false },
+  { title: "pages.checkout.steps.0.title", isCompleted: false },
+  { title: "pages.checkout.steps.1.title", isCompleted: false },
+  { title: "pages.checkout.steps.2.title", isCompleted: false },
 ] as const;
 
 export const CARD_TYPES = [

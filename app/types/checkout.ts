@@ -73,3 +73,8 @@ export interface BuyerInfoForm {
   }) => void;
   onCancel: () => void;
 }
+
+export type Step = {
+  title: string;
+  isCompleted: boolean;
+};

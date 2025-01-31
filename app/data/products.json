@@ -1,118 +1,806 @@
 {
-    "english": [
-      {
-        "id": "1",
-        "name": "QA Software Testing Course (STLC)",
-        "description": "QA: Software Testing Life Cycle (STLC)",
-        "price": 50.00,
-        "image": "/images/qa_testing_card.png",
-        "courseUrl": "https://www.upexgalaxy.com/en/cursos/testing-qa-stlc"
-      },
-      {
-        "id": "2",
-        "name": "Database Testing Course (SQL)",
-        "description": "Database Testing Course (SQL)",
-        "price": 50.00,
-        "image": "/images/SQL_card.png",
-        "courseUrl": "https://www.upexgalaxy.com/en/cursos/db-testing-sql"
-      },
-      {
-        "id": "3",
-        "name": "API Testing with POSTMAN Course",
-        "description": "API Testing with POSTMAN Course",
-        "price": 50.00,
-        "image": "/images/postman_card.png",
-        "courseUrl": "https://www.upexgalaxy.com/en/cursos/api-testing-postman"
-      },
-      {
-        "id": "4",
-        "name": "Cypress Course (e2e)",
-        "description": "Cypress Course (e2e)",
-        "price": 50.00,
-        "image": "/images/cypress_card.png",
-        "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-cypress"
-      },
-      {
-        "id": "5",
-        "name": "Playwright Course (e2e)",
-        "description": "Playwright Course (e2e)",
-        "price": 50.00,
-        "image": "/images/playwright_card.png",
-        "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-playwright"
-      },
-      {
-        "id": "6",
-        "name": "Selenium Course (e2e)",
-        "description": "Selenium Course (e2e)",
-        "price": 50.00,
-        "image": "/images/selenium_card.png",
-        "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-selenium"
-      },
-      {
-        "id": "7",
-        "name": "Performance Testing with K6 Course",
-        "description": "Performance Testing with K6 Course",
-        "price": 50.00,
-        "image": "/images/k6_card.png",
-        "courseUrl": "https://www.upexgalaxy.com/en/cursos/performance-k6"
-      }
-    ],
-    "spanish": [
-      {
-        "id": "1",
-        "name": "Curso de Testing de Software QA (STLC)",
-        "description": "QA: Ciclo de Vida del Testing de Software (STLC)",
-        "price": 50.00,
-        "image": "/images/qa_testing_card.png",
-        "courseUrl": "https://www.upexgalaxy.com/es/cursos/testing-qa-stlc"
-      },
-      {
-        "id": "2",
-        "name": "Curso de Testing de Base de Datos (SQL)",
-        "description": "Curso de Testing de Base de Datos (SQL)",
-        "price": 50.00,
-        "image": "/images/SQL_card.png",
-        "courseUrl": "https://www.upexgalaxy.com/es/cursos/db-testing-sql"
-      },
-      {
-        "id": "3",
-        "name": "Curso de Testing de APIs con POSTMAN",
-        "description": "Curso de Testing de APIs con POSTMAN",
-        "price": 50.00,
-        "image": "/images/postman_card.png",
-        "courseUrl": "https://www.upexgalaxy.com/es/cursos/api-testing-postman"
-      },
-      {
-        "id": "4",
-        "name": "Curso de Cypress (e2e)",
-        "description": "Curso de Cypress (e2e)",
-        "price": 50.00,
-        "image": "/images/cypress_card.png",
-        "courseUrl": "https://www.upexgalaxy.com/es/cursos/automation-cypress"
-      },
-      {
-        "id": "5",
-        "name": "Curso de Playwright (e2e)",
-        "description": "Curso de Playwright (e2e)",
-        "price": 50.00,
-        "image": "/images/playwright_card.png",
-        "courseUrl": "https://www.upexgalaxy.com/es/cursos/automation-playwright"
-      },
-      {
-        "id": "6",
-        "name": "Curso de Selenium (e2e)",
-        "description": "Curso de Selenium (e2e)",
-        "price": 50.00,
-        "image": "/images/selenium_card.png",
-        "courseUrl": "https://www.upexgalaxy.com/es/cursos/automation-selenium"
-      },
-      {
-        "id": "7",
-        "name": "Curso de Testing de Performance con K6",
-        "description": "Curso de Testing de Performance con K6",
-        "price": 50.00,
-        "image": "/images/k6_card.png",
-        "courseUrl": "https://www.upexgalaxy.com/es/cursos/performance-k6"
-      }
-    ]
-  }
+  "english": [
+    {
+      "id": "1",
+      "name": "QA Software Testing Course (STLC)",
+      "description": "QA: Software Testing Life Cycle (STLC)",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/testing-qa-stlc"
+    },
+    {
+      "id": "2",
+      "name": "Database Testing Course (SQL)",
+      "description": "Database Testing Course (SQL)",
+      "price": 50.0,
+      "image": "/images/SQL_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/db-testing-sql"
+    },
+    {
+      "id": "3",
+      "name": "API Testing with POSTMAN Course",
+      "description": "API Testing with POSTMAN Course",
+      "price": 50.0,
+      "image": "/images/postman_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/api-testing-postman"
+    },
+    {
+      "id": "4",
+      "name": "Cypress Course (e2e)",
+      "description": "Cypress Course (e2e)",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-cypress"
+    },
+    {
+      "id": "5",
+      "name": "Playwright Course (e2e)",
+      "description": "Playwright Course (e2e)",
+      "price": 50.0,
+      "image": "/images/playwright_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-playwright"
+    },
+    {
+      "id": "6",
+      "name": "Selenium Course (e2e)",
+      "description": "Selenium Course (e2e)",
+      "price": 50.0,
+      "image": "/images/selenium_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-selenium"
+    },
+    {
+      "id": "7",
+      "name": "Performance Testing with K6 Course",
+      "description": "Performance Testing with K6 Course",
+      "price": 50.0,
+      "image": "/images/k6_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/performance-k6"
+    },
+    {
+      "id": "8",
+      "name": "Advanced Test Automation Strategies",
+      "description": "Comprehensive Test Automation Techniques and Best Practices",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/advanced-test-automation"
+    },
+    {
+      "id": "9",
+      "name": "Mobile Application Testing Masterclass",
+      "description": "In-Depth Testing Techniques for Mobile Apps and Cross-Platform Development",
+      "price": 50.0,
+      "image": "/images/postman_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/mobile-app-testing"
+    },
+    {
+      "id": "10",
+      "name": "Security Testing Fundamentals",
+      "description": "Comprehensive Approach to Identifying and Mitigating Software Vulnerabilities",
+      "price": 50.0,
+      "image": "/images/selenium_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/security-testing"
+    },
+    {
+      "id": "11",
+      "name": "Cloud Testing and DevOps Integration",
+      "description": "Testing Strategies for Cloud-Based Applications and Continuous Delivery",
+      "price": 50.0,
+      "image": "/images/k6_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/cloud-testing-devops"
+    },
+    {
+      "id": "12",
+      "name": "Test Design and Test Case Development",
+      "description": "Advanced Techniques for Creating Effective and Comprehensive Test Cases",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-case-design"
+    },
+    {
+      "id": "13",
+      "name": "Agile Testing Methodologies",
+      "description": "Implementing Effective Testing Practices in Agile Software Development",
+      "price": 50.0,
+      "image": "/images/playwright_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/agile-testing"
+    },
+    {
+      "id": "14",
+      "name": "Machine Learning in Software Testing",
+      "description": "Exploring AI and Machine Learning Techniques for Advanced Testing",
+      "price": 50.0,
+      "image": "/images/SQL_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/ml-testing"
+    },
+    {
+      "id": "15",
+      "name": "Big Data Testing Techniques",
+      "description": "Testing Strategies for Large-Scale Data Processing and Analytics Platforms",
+      "price": 50.0,
+      "image": "/images/postman_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/big-data-testing"
+    },
+    {
+      "id": "16",
+      "name": "Continuous Integration and Testing",
+      "description": "Implementing Automated Testing in Continuous Integration Pipelines",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/ci-testing"
+    },
+    {
+      "id": "17",
+      "name": "Performance Engineering Fundamentals",
+      "description": "Advanced Performance Testing and Optimization Techniques",
+      "price": 50.0,
+      "image": "/images/k6_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/performance-engineering"
+    },
+    {
+      "id": "18",
+      "name": "Web Application Security Testing",
+      "description": "Comprehensive Approach to Identifying Web Application Vulnerabilities",
+      "price": 50.0,
+      "image": "/images/selenium_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/web-security-testing"
+    },
+    {
+      "id": "19",
+      "name": "Microservices Testing Strategies",
+      "description": "Testing Techniques for Distributed and Microservices-Based Architectures",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/microservices-testing"
+    },
+    {
+      "id": "20",
+      "name": "Usability and Accessibility Testing",
+      "description": "Comprehensive Techniques for User Experience and Accessibility Validation",
+      "price": 50.0,
+      "image": "/images/playwright_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/usability-testing"
+    },
+    {
+      "id": "21",
+      "name": "Blockchain and Cryptocurrency Testing",
+      "description": "Testing Strategies for Blockchain Technologies and Cryptocurrency Platforms",
+      "price": 50.0,
+      "image": "/images/SQL_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/blockchain-testing"
+    },
+    {
+      "id": "22",
+      "name": "IoT Device Testing",
+      "description": "Comprehensive Testing Approaches for Internet of Things (IoT) Devices",
+      "price": 50.0,
+      "image": "/images/postman_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/iot-testing"
+    },
+    {
+      "id": "23",
+      "name": "Test Automation Framework Design",
+      "description": "Building Robust and Scalable Test Automation Frameworks",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-automation-framework"
+    },
+    {
+      "id": "24",
+      "name": "Embedded Systems Testing",
+      "description": "Testing Techniques for Real-Time and Embedded Software Systems",
+      "price": 50.0,
+      "image": "/images/k6_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/embedded-systems-testing"
+    },
+    {
+      "id": "25",
+      "name": "AR/VR Testing Techniques",
+      "description": "Testing Strategies for Augmented and Virtual Reality Applications",
+      "price": 50.0,
+      "image": "/images/selenium_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/ar-vr-testing"
+    },
+    {
+      "id": "26",
+      "name": "API Performance and Load Testing",
+      "description": "Advanced Techniques for API Performance Evaluation and Stress Testing",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/api-performance-testing"
+    },
+    {
+      "id": "27",
+      "name": "Game Testing and Quality Assurance",
+      "description": "Comprehensive Testing Approaches for Video Game Development",
+      "price": 50.0,
+      "image": "/images/playwright_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/game-testing"
+    },
+    {
+      "id": "28",
+      "name": "Cybersecurity Testing Fundamentals",
+      "description": "In-Depth Techniques for Identifying and Mitigating Cybersecurity Risks",
+      "price": 50.0,
+      "image": "/images/SQL_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/cybersecurity-testing"
+    },
+    {
+      "id": "29",
+      "name": "Serverless Application Testing",
+      "description": "Testing Strategies for Cloud-Native and Serverless Architectures",
+      "price": 50.0,
+      "image": "/images/postman_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/serverless-testing"
+    },
+    {
+      "id": "30",
+      "name": "Test Data Management",
+      "description": "Techniques for Effective Test Data Creation, Management, and Anonymization",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-data-management"
+    },
+    {
+      "id": "31",
+      "name": "Containerization and Testing",
+      "description": "Testing Strategies for Docker and Kubernetes Environments",
+      "price": 50.0,
+      "image": "/images/k6_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/containerization-testing"
+    },
+    {
+      "id": "32",
+      "name": "Machine Learning Model Testing",
+      "description": "Comprehensive Validation Techniques for AI and Machine Learning Models",
+      "price": 50.0,
+      "image": "/images/selenium_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/ml-model-testing"
+    },
+    {
+      "id": "33",
+      "name": "Contract Testing for Microservices",
+      "description": "Advanced Techniques for Validating Service Contracts in Microservices",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/contract-testing"
+    },
+    {
+      "id": "34",
+      "name": "Mobile Security Testing",
+      "description": "Comprehensive Mobile Application Security Testing Approaches",
+      "price": 50.0,
+      "image": "/images/playwright_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/mobile-security-testing"
+    },
+    {
+      "id": "35",
+      "name": "Regression Testing Techniques",
+      "description": "Advanced Strategies for Effective Regression Testing and Test Suite Optimization",
+      "price": 50.0,
+      "image": "/images/SQL_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/regression-testing"
+    },
+    {
+      "id": "36",
+      "name": "Test Automation with AI",
+      "description": "Leveraging Artificial Intelligence in Test Automation Processes",
+      "price": 50.0,
+      "image": "/images/postman_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/ai-test-automation"
+    },
+    {
+      "id": "37",
+      "name": "Exploratory Testing Masterclass",
+      "description": "Advanced Techniques for Unstructured and Creative Software Testing",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/exploratory-testing"
+    },
+    {
+      "id": "38",
+      "name": "Chaos Engineering and Testing",
+      "description": "Advanced Techniques for Resilience Testing in Distributed Systems",
+      "price": 50.0,
+      "image": "/images/k6_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/chaos-engineering"
+    },
+    {
+      "id": "39",
+      "name": "Test Case Design Techniques",
+      "description": "Advanced Methods for Creating Effective and Comprehensive Test Cases",
+      "price": 50.0,
+      "image": "/images/selenium_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-case-design-techniques"
+    },
+    {
+      "id": "40",
+      "name": "Cloud Performance Testing",
+      "description": "Performance Testing Strategies for Cloud-Based Applications",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/cloud-performance-testing"
+    },
+    {
+      "id": "41",
+      "name": "Cross-Browser Testing Strategies",
+      "description": "Advanced Techniques for Multi-Browser Compatibility Testing",
+      "price": 50.0,
+      "image": "/images/selenium_card.png",
+      "courseUrl": "https://cross-browser-testing"
+    },
+    {
+      "id": "42",
+      "name": "Testing in DevSecOps",
+      "description": "Implementing Security Testing in DevOps Pipeline",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://devsecops-testing"
+    },
+    {
+      "id": "43",
+      "name": "Visual Regression Testing",
+      "description": "Automated Testing for UI Changes and Visual Consistency",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://visual-regression"
+    },
+    {
+      "id": "44",
+      "name": "Testing in Scaled Agile Framework",
+      "description": "Quality Assurance Strategies for SAFe Implementation",
+      "price": 50.0,
+      "image": "/images/playwright_card.png",
+      "courseUrl": "https://safe-testing"
+    },
+    {
+      "id": "45",
+      "name": "End-to-End Testing Architecture",
+      "description": "Designing Comprehensive E2E Testing Solutions",
+      "price": 50.0,
+      "image": "/images/k6_card.png",
+      "courseUrl": "https://e2e-architecture"
+    },
+    {
+      "id": "46",
+      "name": "Testing GraphQL APIs",
+      "description": "Specialized Testing Approaches for GraphQL Implementations",
+      "price": 50.0,
+      "image": "/images/postman_card.png",
+      "courseUrl": "https://graphql-testing"
+    },
+    {
+      "id": "47",
+      "name": "Testing Legacy Systems",
+      "description": "Strategies for Testing and Maintaining Legacy Applications",
+      "price": 50.0,
+      "image": "/images/SQL_card.png",
+      "courseUrl": "https://legacy-testing"
+    },
+    {
+      "id": "48",
+      "name": "Testing in Edge Computing",
+      "description": "Quality Assurance for Edge Computing Applications",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://edge-computing-testing"
+    },
+    {
+      "id": "49",
+      "name": "Testing Voice Interfaces",
+      "description": "Quality Assurance for Voice-Controlled Applications",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://voice-interface-testing"
+    },
+    {
+      "id": "50",
+      "name": "Testing Progressive Web Apps",
+      "description": "Comprehensive Testing Strategies for PWA Development",
+      "price": 50.0,
+      "image": "/images/playwright_card.png",
+      "courseUrl": "https://pwa-testing"
+    }
+  ],
+  "spanish": [
+    {
+      "id": "1",
+      "name": "Curso de Testing de Software QA (STLC)",
+      "description": "QA: Ciclo de Vida de Pruebas de Software (STLC)",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/testing-qa-stlc"
+    },
+    {
+      "id": "2",
+      "name": "Curso de Pruebas de Base de Datos (SQL)",
+      "description": "Curso de Pruebas de Base de Datos (SQL)",
+      "price": 50.0,
+      "image": "/images/SQL_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/db-testing-sql"
+    },
+    {
+      "id": "3",
+      "name": "Curso de Pruebas de API con POSTMAN",
+      "description": "Curso de Pruebas de API con POSTMAN",
+      "price": 50.0,
+      "image": "/images/postman_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/api-testing-postman"
+    },
+    {
+      "id": "4",
+      "name": "Curso de Cypress (e2e)",
+      "description": "Curso de Cypress (pruebas de extremo a extremo)",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-cypress"
+    },
+    {
+      "id": "5",
+      "name": "Curso de Playwright (e2e)",
+      "description": "Curso de Playwright (pruebas de extremo a extremo)",
+      "price": 50.0,
+      "image": "/images/playwright_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-playwright"
+    },
+    {
+      "id": "6",
+      "name": "Curso de Selenium (e2e)",
+      "description": "Curso de Selenium (pruebas de extremo a extremo)",
+      "price": 50.0,
+      "image": "/images/selenium_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/automation-selenium"
+    },
+    {
+      "id": "7",
+      "name": "Curso de Pruebas de Rendimiento con K6",
+      "description": "Curso de Pruebas de Rendimiento con K6",
+      "price": 50.0,
+      "image": "/images/k6_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/performance-k6"
+    },
+    {
+      "id": "8",
+      "name": "Estrategias Avanzadas de Automatización de Pruebas",
+      "description": "Técnicas Completas y Mejores Prácticas de Automatización de Pruebas",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/advanced-test-automation"
+    },
+    {
+      "id": "9",
+      "name": "Masterclass de Pruebas de Aplicaciones Móviles",
+      "description": "Técnicas Profundas de Pruebas para Apps Móviles y Desarrollo Multiplataforma",
+      "price": 50.0,
+      "image": "/images/postman_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/mobile-app-testing"
+    },
+    {
+      "id": "10",
+      "name": "Fundamentos de Pruebas de Seguridad",
+      "description": "Enfoque Integral para Identificar y Mitigar Vulnerabilidades de Software",
+      "price": 50.0,
+      "image": "/images/selenium_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/security-testing"
+    },
+    {
+      "id": "11",
+      "name": "Pruebas en la Nube e Integración DevOps",
+      "description": "Estrategias de Pruebas para Aplicaciones en la Nube y Entrega Continua",
+      "price": 50.0,
+      "image": "/images/k6_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/cloud-testing-devops"
+    },
+    {
+      "id": "12",
+      "name": "Diseño de Pruebas y Desarrollo de Casos de Prueba",
+      "description": "Técnicas Avanzadas para Crear Casos de Prueba Efectivos y Completos",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-case-design"
+    },
+    {
+      "id": "13",
+      "name": "Metodologías de Pruebas Ágiles",
+      "description": "Implementación de Prácticas Efectivas de Pruebas en Desarrollo Ágil de Software",
+      "price": 50.0,
+      "image": "/images/playwright_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/agile-testing"
+    },
+    {
+      "id": "14",
+      "name": "Machine Learning en Pruebas de Software",
+      "description": "Exploración de Técnicas de IA y Machine Learning para Pruebas Avanzadas",
+      "price": 50.0,
+      "image": "/images/SQL_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/ml-testing"
+    },
+    {
+      "id": "15",
+      "name": "Técnicas de Pruebas de Big Data",
+      "description": "Estrategias de Pruebas para Plataformas de Procesamiento y Análisis de Datos a Gran Escala",
+      "price": 50.0,
+      "image": "/images/postman_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/big-data-testing"
+    },
+    {
+      "id": "16",
+      "name": "Integración Continua y Pruebas",
+      "description": "Implementación de Pruebas Automatizadas en Pipelines de Integración Continua",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/ci-testing"
+    },
+    {
+      "id": "17",
+      "name": "Fundamentos de Ingeniería de Rendimiento",
+      "description": "Técnicas Avanzadas de Pruebas de Rendimiento y Optimización",
+      "price": 50.0,
+      "image": "/images/k6_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/performance-engineering"
+    },
+    {
+      "id": "18",
+      "name": "Pruebas de Seguridad de Aplicaciones Web",
+      "description": "Enfoque Integral para Identificar Vulnerabilidades en Aplicaciones Web",
+      "price": 50.0,
+      "image": "/images/selenium_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/web-security-testing"
+    },
+    {
+      "id": "19",
+      "name": "Estrategias de Pruebas de Microservicios",
+      "description": "Técnicas de Pruebas para Arquitecturas Distribuidas y Basadas en Microservicios",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/microservices-testing"
+    },
+    {
+      "id": "20",
+      "name": "Pruebas de Usabilidad y Accesibilidad",
+      "description": "Técnicas Integrales para Validación de Experiencia de Usuario y Accesibilidad",
+      "price": 50.0,
+      "image": "/images/playwright_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/usability-testing"
+    },
+    {
+      "id": "21",
+      "name": "Pruebas de Blockchain y Criptomonedas",
+      "description": "Estrategias de Pruebas para Tecnologías Blockchain y Plataformas de Criptomonedas",
+      "price": 50.0,
+      "image": "/images/SQL_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/blockchain-testing"
+    },
+    {
+      "id": "22",
+      "name": "Pruebas de Dispositivos IoT",
+      "description": "Enfoques Integrales de Pruebas para Dispositivos del Internet de las Cosas (IoT)",
+      "price": 50.0,
+      "image": "/images/postman_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/iot-testing"
+    },
+    {
+      "id": "23",
+      "name": "Diseño de Frameworks de Automatización de Pruebas",
+      "description": "Construcción de Frameworks de Automatización de Pruebas Robustos y Escalables",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-automation-framework"
+    },
+    {
+      "id": "24",
+      "name": "Pruebas de Sistemas Embebidos",
+      "description": "Técnicas de Pruebas para Sistemas de Software en Tiempo Real y Embebidos",
+      "price": 50.0,
+      "image": "/images/k6_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/embedded-systems-testing"
+    },
+    {
+      "id": "25",
+      "name": "Técnicas de Pruebas de AR/VR",
+      "description": "Estrategias de Pruebas para Aplicaciones de Realidad Aumentada y Virtual",
+      "price": 50.0,
+      "image": "/images/selenium_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/ar-vr-testing"
+    },
+    {
+      "id": "26",
+      "name": "Pruebas de Rendimiento y Carga de APIs",
+      "description": "Técnicas Avanzadas para Evaluación de Rendimiento y Pruebas de Estrés de APIs",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/api-performance-testing"
+    },
+    {
+      "id": "27",
+      "name": "Pruebas y Control de Calidad de Videojuegos",
+      "description": "Enfoques Integrales de Pruebas para Desarrollo de Videojuegos",
+      "price": 50.0,
+      "image": "/images/playwright_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/game-testing"
+    },
+    {
+      "id": "28",
+      "name": "Fundamentos de Pruebas de Ciberseguridad",
+      "description": "Técnicas Profundas para Identificar y Mitigar Riesgos de Ciberseguridad",
+      "price": 50.0,
+      "image": "/images/SQL_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/cybersecurity-testing"
+    },
+    {
+      "id": "29",
+      "name": "Pruebas de Aplicaciones Serverless",
+      "description": "Estrategias de Pruebas para Arquitecturas Cloud-Native y Serverless",
+      "price": 50.0,
+      "image": "/images/postman_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/serverless-testing"
+    },
+    {
+      "id": "30",
+      "name": "Gestión de Datos de Prueba",
+      "description": "Técnicas para la Creación, Gestión y Anonimización Efectiva de Datos de Prueba",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-data-management"
+    },
+    {
+      "id": "31",
+      "name": "Containerización y Pruebas",
+      "description": "Estrategias de Pruebas para Entornos Docker y Kubernetes",
+      "price": 50.0,
+      "image": "/images/k6_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/containerization-testing"
+    },
+    {
+      "id": "32",
+      "name": "Pruebas de Modelos de Machine Learning",
+      "description": "Técnicas Integrales de Validación para Modelos de IA y Machine Learning",
+      "price": 50.0,
+      "image": "/images/selenium_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/ml-model-testing"
+    },
+    {
+      "id": "33",
+      "name": "Pruebas de Contrato para Microservicios",
+      "description": "Técnicas Avanzadas para Validar Contratos de Servicio en Microservicios",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/contract-testing"
+    },
+    {
+      "id": "34",
+      "name": "Pruebas de Seguridad Móvil",
+      "description": "Enfoques Integrales de Pruebas de Seguridad para Aplicaciones Móviles",
+      "price": 50.0,
+      "image": "/images/playwright_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/mobile-security-testing"
+    },
+    {
+      "id": "35",
+      "name": "Técnicas de Pruebas de Regresión",
+      "description": "Estrategias Avanzadas para Pruebas de Regresión y Optimización de Suite de Pruebas",
+      "price": 50.0,
+      "image": "/images/SQL_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/regression-testing"
+    },
+    {
+      "id": "36",
+      "name": "Automatización de Pruebas con IA",
+      "description": "Aprovechando la Inteligencia Artificial en Procesos de Automatización de Pruebas",
+      "price": 50.0,
+      "image": "/images/postman_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/ai-test-automation"
+    },
+    {
+      "id": "37",
+      "name": "Masterclass de Pruebas Exploratorias",
+      "description": "Técnicas Avanzadas para Pruebas de Software No Estructuradas y Creativas",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/exploratory-testing"
+    },
+    {
+      "id": "38",
+      "name": "Ingeniería del Caos y Pruebas",
+      "description": "Técnicas Avanzadas para Pruebas de Resiliencia en Sistemas Distribuidos",
+      "price": 50.0,
+      "image": "/images/k6_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/chaos-engineering"
+    },
+    {
+      "id": "39",
+      "name": "Técnicas de Diseño de Casos de Prueba",
+      "description": "Métodos Avanzados para Crear Casos de Prueba Efectivos y Completos",
+      "price": 50.0,
+      "image": "/images/selenium_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-case-design-techniques"
+    },
+    {
+      "id": "40",
+      "name": "Pruebas de Rendimiento en la Nube",
+      "description": "Estrategias de Pruebas de Rendimiento para Aplicaciones Basadas en la Nube",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://www.upexgalaxy.com/en/cursos/cloud-performance-testing"
+    },
+    {
+      "id": "41",
+      "name": "Estrategias de Pruebas Cross-Browser",
+      "description": "Técnicas Avanzadas para Pruebas de Compatibilidad Multi-Navegador",
+      "price": 50.0,
+      "image": "/images/selenium_card.png",
+      "courseUrl": "https://cross-browser-testing"
+    },
+    {
+      "id": "42",
+      "name": "Pruebas en DevSecOps",
+      "description": "Implementación de Pruebas de Seguridad en Pipeline DevOps",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://devsecops-testing"
+    },
+    {
+      "id": "43",
+      "name": "Pruebas de Regresión Visual",
+      "description": "Pruebas Automatizadas para Cambios de UI y Consistencia Visual",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://visual-regression"
+    },
+    {
+      "id": "44",
+      "name": "Pruebas en Framework Ágil Escalado",
+      "description": "Estrategias de Aseguramiento de Calidad para Implementación SAFe",
+      "price": 50.0,
+      "image": "/images/playwright_card.png",
+      "courseUrl": "https://safe-testing"
+    },
+    {
+      "id": "45",
+      "name": "Arquitectura de Pruebas End-to-End",
+      "description": "Diseñando Soluciones Integrales de Pruebas E2E",
+      "price": 50.0,
+      "image": "/images/k6_card.png",
+      "courseUrl": "https://e2e-architecture"
+    },
+    {
+      "id": "46",
+      "name": "Pruebas de APIs GraphQL",
+      "description": "Enfoques Especializados de Pruebas para Implementaciones GraphQL",
+      "price": 50.0,
+      "image": "/images/postman_card.png",
+      "courseUrl": "https://graphql-testing"
+    },
+    {
+      "id": "47",
+      "name": "Pruebas de Sistemas Legacy",
+      "description": "Estrategias para Pruebas y Mantenimiento de Aplicaciones Legacy",
+      "price": 50.0,
+      "image": "/images/SQL_card.png",
+      "courseUrl": "https://legacy-testing"
+    },
+    {
+      "id": "48",
+      "name": "Pruebas en Edge Computing",
+      "description": "Aseguramiento de Calidad para Aplicaciones de Edge Computing",
+      "price": 50.0,
+      "image": "/images/qa_testing_card.png",
+      "courseUrl": "https://edge-computing-testing"
+    },
+    {
+      "id": "49",
+      "name": "Pruebas de Interfaces de Voz",
+      "description": "Aseguramiento de Calidad para Aplicaciones Controladas por Voz",
+      "price": 50.0,
+      "image": "/images/cypress_card.png",
+      "courseUrl": "https://voice-interface-testing"
+    },
+    {
+      "id": "50",
+      "name": "Pruebas de Aplicaciones Web Progresivas",
+      "description": "Estrategias Integrales de Pruebas para Desarrollo de PWA",
+      "price": 50.0,
+      "image": "/images/playwright_card.png",
+      "courseUrl": "https://pwa-testing"
+    }
+  ]
+}
