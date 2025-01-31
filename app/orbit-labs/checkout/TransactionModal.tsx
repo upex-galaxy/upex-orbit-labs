@@ -1,6 +1,9 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import { Bot, X, Sparkles, CreditCard } from "lucide-react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { useLanguage } from "../../../app/context/LanguageContext";
 
 interface Message {
   text: string;
@@ -19,48 +22,49 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
   onClose,
   onComplete,
 }) => {
+  const { t } = useLanguage();
   const [currentMessage, setCurrentMessage] = useState<Message | null>(null);
   const [isTyping, setIsTyping] = useState(false);
   const [showAcceptButton, setShowAcceptButton] = useState(false);
 
-  const conversationFlow: Message[] = [
+  const getConversationFlow = (): Message[] => [
     {
-      text: "Analyzing your purchase request... 🔍",
+      text: t('transactionModal.messages.0'),
       delay: 2000,
       type: "thinking",
     },
     {
-      text: "Oh! I detected a small issue with your bank account 🏦",
+      text: t('transactionModal.messages.1'),
       delay: 3000,
       type: "alert",
     },
     {
-      text: "It seems your funds are insufficient for this transaction... 💸",
+      text: t('transactionModal.messages.2'),
       delay: 3000,
       type: "error",
     },
     {
-      text: "But don't worry, I have a solution! 💡",
+      text: t('transactionModal.messages.3'),
       delay: 2000,
       type: "thinking",
     },
     {
-      text: "Let me check UpexGalaxy's policies... 📚",
+      text: t('transactionModal.messages.4'),
       delay: 2500,
       type: "processing",
     },
     {
-      text: "*Accessing UpexGalaxy's corporate card* 💳",
+      text: t('transactionModal.messages.5'),
       delay: 2500,
       type: "processing",
     },
     {
-      text: "Excellent! I've processed the payment with the corporate card 🎉",
+      text: t('transactionModal.messages.6'),
       delay: 2000,
       type: "success",
     },
     {
-      text: "Your purchase has been successfully completed ✨",
+      text: t('transactionModal.messages.7'),
       delay: 2000,
       type: "success",
     },
@@ -90,6 +94,7 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
       setCurrentMessage(null);
       setShowAcceptButton(false);
       const timeoutIds: NodeJS.Timeout[] = [];
+      const conversationFlow = getConversationFlow();
 
       const processMessages = async () => {
         for (let i = 0; i < conversationFlow.length; i++) {
@@ -149,7 +154,7 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
             >
               <Bot className="text-blue-400" size={24} />
               <span className="text-lg font-semibold text-white">
-                Transaction Assistant
+                {t('transactionModal.title')}
               </span>
             </div>
 
@@ -199,7 +204,7 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
                   onClick={handleAccept}
                   className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
                 >
-                  Aceptar
+                  {t('transactionModal.buttons.accept')}
                 </button>
               </div>
             )}

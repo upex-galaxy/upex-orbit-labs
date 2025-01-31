@@ -1,12 +1,17 @@
+"use client";
+
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { BuyerInfoForm } from "../types/checkout";
+import { useLanguage } from "../../app/context/LanguageContext";
 
 export const BuyerForm: React.FC<BuyerInfoForm> = ({
   initialData,
   onSubmit,
   onCancel,
 }) => {
+  const { t } = useLanguage();
+  
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -40,21 +45,25 @@ export const BuyerForm: React.FC<BuyerInfoForm> = ({
     const isFormEmpty = Object.values(formData).every(value => value === "");
     if (isFormEmpty) {
       onSubmit({
-        firstName: "Anonymous",
-        lastName: "Slacker",
-        email: "anonymous@example.com",
-        phone: "N/A",
-        country: "Lazyland"
+        firstName: t('forms.buyerForm.defaults.firstName'),
+        lastName: t('forms.buyerForm.defaults.lastName'),
+        email: t('forms.buyerForm.defaults.email'),
+        phone: t('forms.buyerForm.defaults.phone'),
+        country: t('forms.buyerForm.defaults.country')
       });
     } else {
       onSubmit(formData);
     }
   };
+
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
       <div className="bg-gray-800 rounded-lg p-6 w-full max-w-md">
         <h2 className="text-xl font-bold text-white mb-4">
-          {initialData ? "Edit Buyer Information" : "Add Buyer Information"}
+          {initialData 
+            ? t('forms.buyerForm.title.edit')
+            : t('forms.buyerForm.title.add')
+          }
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -63,7 +72,7 @@ export const BuyerForm: React.FC<BuyerInfoForm> = ({
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
-              placeholder="First Name"
+              placeholder={t('forms.buyerForm.placeholders.firstName')}
               className="w-full p-2 bg-gray-700 text-white rounded"
             />
           </div>
@@ -73,7 +82,7 @@ export const BuyerForm: React.FC<BuyerInfoForm> = ({
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
-              placeholder="Last Name"
+              placeholder={t('forms.buyerForm.placeholders.lastName')}
               className="w-full p-2 bg-gray-700 text-white rounded"
             />
           </div>
@@ -83,7 +92,7 @@ export const BuyerForm: React.FC<BuyerInfoForm> = ({
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Email"
+              placeholder={t('forms.buyerForm.placeholders.email')}
               className="w-full p-2 bg-gray-700 text-white rounded"
             />
           </div>
@@ -93,7 +102,7 @@ export const BuyerForm: React.FC<BuyerInfoForm> = ({
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="Phone Number"
+              placeholder={t('forms.buyerForm.placeholders.phone')}
               className="w-full p-2 bg-gray-700 text-white rounded"
             />
           </div>
@@ -103,7 +112,7 @@ export const BuyerForm: React.FC<BuyerInfoForm> = ({
               name="country"
               value={formData.country}
               onChange={handleChange}
-              placeholder="Country"
+              placeholder={t('forms.buyerForm.placeholders.country')}
               className="w-full p-2 bg-gray-700 text-white rounded"
             />
           </div>
@@ -113,13 +122,16 @@ export const BuyerForm: React.FC<BuyerInfoForm> = ({
               onClick={onCancel}
               className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-500"
             >
-              Cancel
+              {t('forms.buyerForm.buttons.cancel')}
             </button>
             <button
               type="submit"
               className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
             >
-              {initialData ? "Save Changes" : "Add Buyer"}
+              {initialData 
+                ? t('forms.buyerForm.buttons.submit.edit')
+                : t('forms.buyerForm.buttons.submit.add')
+              }
             </button>
           </div>
         </form>

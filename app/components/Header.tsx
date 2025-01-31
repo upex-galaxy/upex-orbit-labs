@@ -1,16 +1,18 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import Link from "next/link"
-import { useRouter } from "next/navigation"
+import { useRouter, usePathname } from "next/navigation"
 import { Menu } from "lucide-react"
 import { useLanguage } from "../context/LanguageContext"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const router = useRouter()
+  const pathname = usePathname() // Añadimos esto para obtener la ruta actual
   const menuRef = useRef<HTMLDivElement>(null)
   const { language, setLanguage, t, isLoading } = useLanguage()
+
+  const isLoginPage = pathname === '/' // Verificamos si estamos en la página de login
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -52,9 +54,9 @@ export default function Header() {
   return (
     <header className="bg-[#020B2D] shadow-md">
       <div className="container flex-1 px-4 py-4 flex flex-wrap justify-between items-center">
-        <Link href="/" className="text-xl sm:text-2xl font-bold text-[#00FFFF]">
+        <span className="text-xl sm:text-2xl font-bold text-[#00FFFF]">
           {t('pages.headers.title')}
-        </Link>
+        </span>
         <div className="relative" ref={menuRef}>
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -72,12 +74,14 @@ export default function Header() {
                 >
                   {language === 'en' ? 'Español' : 'English'}
                 </button>
-                <button
-                  onClick={handleLogout}
-                  className="w-full text-left px-3 sm:px-4 py-2 text-sm sm:text-base text-white hover:bg-gray-700 transition-colors duration-200"
-                >
-                  {t('pages.headers.buttons.logout')}
-                </button>
+                {!isLoginPage && ( // Solo mostramos el botón de logout si NO estamos en la página de login
+                  <button
+                    onClick={handleLogout}
+                    className="w-full text-left px-3 sm:px-4 py-2 text-sm sm:text-base text-white hover:bg-gray-700 transition-colors duration-200"
+                  >
+                    {t('pages.headers.buttons.logout')}
+                  </button>
+                )}
               </div>
             </div>
           )}

@@ -69,7 +69,7 @@
       "name": "Mobile Application Testing Masterclass",
       "description": "In-Depth Testing Techniques for Mobile Apps and Cross-Platform Development",
       "price": 50.0,
-      "image": "/images/postman_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/mobile-app-testing"
     },
     {
@@ -77,7 +77,7 @@
       "name": "Security Testing Fundamentals",
       "description": "Comprehensive Approach to Identifying and Mitigating Software Vulnerabilities",
       "price": 50.0,
-      "image": "/images/selenium_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/security-testing"
     },
     {
@@ -85,7 +85,7 @@
       "name": "Cloud Testing and DevOps Integration",
       "description": "Testing Strategies for Cloud-Based Applications and Continuous Delivery",
       "price": 50.0,
-      "image": "/images/k6_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/cloud-testing-devops"
     },
     {
@@ -93,7 +93,7 @@
       "name": "Test Design and Test Case Development",
       "description": "Advanced Techniques for Creating Effective and Comprehensive Test Cases",
       "price": 50.0,
-      "image": "/images/cypress_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-case-design"
     },
     {
@@ -101,7 +101,7 @@
       "name": "Agile Testing Methodologies",
       "description": "Implementing Effective Testing Practices in Agile Software Development",
       "price": 50.0,
-      "image": "/images/playwright_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/agile-testing"
     },
     {
@@ -109,7 +109,7 @@
       "name": "Machine Learning in Software Testing",
       "description": "Exploring AI and Machine Learning Techniques for Advanced Testing",
       "price": 50.0,
-      "image": "/images/SQL_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/ml-testing"
     },
     {
@@ -117,7 +117,7 @@
       "name": "Big Data Testing Techniques",
       "description": "Testing Strategies for Large-Scale Data Processing and Analytics Platforms",
       "price": 50.0,
-      "image": "/images/postman_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/big-data-testing"
     },
     {
@@ -125,7 +125,7 @@
       "name": "Continuous Integration and Testing",
       "description": "Implementing Automated Testing in Continuous Integration Pipelines",
       "price": 50.0,
-      "image": "/images/qa_testing_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/ci-testing"
     },
     {
@@ -133,7 +133,7 @@
       "name": "Performance Engineering Fundamentals",
       "description": "Advanced Performance Testing and Optimization Techniques",
       "price": 50.0,
-      "image": "/images/k6_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/performance-engineering"
     },
     {
@@ -141,7 +141,7 @@
       "name": "Web Application Security Testing",
       "description": "Comprehensive Approach to Identifying Web Application Vulnerabilities",
       "price": 50.0,
-      "image": "/images/selenium_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/web-security-testing"
     },
     {
@@ -149,7 +149,7 @@
       "name": "Microservices Testing Strategies",
       "description": "Testing Techniques for Distributed and Microservices-Based Architectures",
       "price": 50.0,
-      "image": "/images/cypress_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/microservices-testing"
     },
     {
@@ -157,7 +157,7 @@
       "name": "Usability and Accessibility Testing",
       "description": "Comprehensive Techniques for User Experience and Accessibility Validation",
       "price": 50.0,
-      "image": "/images/playwright_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/usability-testing"
     },
     {
@@ -165,7 +165,7 @@
       "name": "Blockchain and Cryptocurrency Testing",
       "description": "Testing Strategies for Blockchain Technologies and Cryptocurrency Platforms",
       "price": 50.0,
-      "image": "/images/SQL_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/blockchain-testing"
     },
     {
@@ -173,7 +173,7 @@
       "name": "IoT Device Testing",
       "description": "Comprehensive Testing Approaches for Internet of Things (IoT) Devices",
       "price": 50.0,
-      "image": "/images/postman_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/iot-testing"
     },
     {
@@ -181,7 +181,7 @@
       "name": "Test Automation Framework Design",
       "description": "Building Robust and Scalable Test Automation Frameworks",
       "price": 50.0,
-      "image": "/images/qa_testing_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-automation-framework"
     },
     {
@@ -189,7 +189,7 @@
       "name": "Embedded Systems Testing",
       "description": "Testing Techniques for Real-Time and Embedded Software Systems",
       "price": 50.0,
-      "image": "/images/k6_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/embedded-systems-testing"
     },
     {
@@ -197,7 +197,7 @@
       "name": "AR/VR Testing Techniques",
       "description": "Testing Strategies for Augmented and Virtual Reality Applications",
       "price": 50.0,
-      "image": "/images/selenium_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/ar-vr-testing"
     },
     {
@@ -205,7 +205,7 @@
       "name": "API Performance and Load Testing",
       "description": "Advanced Techniques for API Performance Evaluation and Stress Testing",
       "price": 50.0,
-      "image": "/images/cypress_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/api-performance-testing"
     },
     {
@@ -213,7 +213,7 @@
       "name": "Game Testing and Quality Assurance",
       "description": "Comprehensive Testing Approaches for Video Game Development",
       "price": 50.0,
-      "image": "/images/playwright_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/game-testing"
     },
     {
@@ -221,7 +221,7 @@
       "name": "Cybersecurity Testing Fundamentals",
       "description": "In-Depth Techniques for Identifying and Mitigating Cybersecurity Risks",
       "price": 50.0,
-      "image": "/images/SQL_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/cybersecurity-testing"
     },
     {
@@ -229,7 +229,7 @@
       "name": "Serverless Application Testing",
       "description": "Testing Strategies for Cloud-Native and Serverless Architectures",
       "price": 50.0,
-      "image": "/images/postman_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/serverless-testing"
     },
     {
@@ -237,7 +237,7 @@
       "name": "Test Data Management",
       "description": "Techniques for Effective Test Data Creation, Management, and Anonymization",
       "price": 50.0,
-      "image": "/images/qa_testing_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-data-management"
     },
     {
@@ -245,7 +245,7 @@
       "name": "Containerization and Testing",
       "description": "Testing Strategies for Docker and Kubernetes Environments",
       "price": 50.0,
-      "image": "/images/k6_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/containerization-testing"
     },
     {
@@ -253,7 +253,7 @@
       "name": "Machine Learning Model Testing",
       "description": "Comprehensive Validation Techniques for AI and Machine Learning Models",
       "price": 50.0,
-      "image": "/images/selenium_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/ml-model-testing"
     },
     {
@@ -261,7 +261,7 @@
       "name": "Contract Testing for Microservices",
       "description": "Advanced Techniques for Validating Service Contracts in Microservices",
       "price": 50.0,
-      "image": "/images/cypress_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/contract-testing"
     },
     {
@@ -269,7 +269,7 @@
       "name": "Mobile Security Testing",
       "description": "Comprehensive Mobile Application Security Testing Approaches",
       "price": 50.0,
-      "image": "/images/playwright_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/mobile-security-testing"
     },
     {
@@ -277,7 +277,7 @@
       "name": "Regression Testing Techniques",
       "description": "Advanced Strategies for Effective Regression Testing and Test Suite Optimization",
       "price": 50.0,
-      "image": "/images/SQL_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/regression-testing"
     },
     {
@@ -285,7 +285,7 @@
       "name": "Test Automation with AI",
       "description": "Leveraging Artificial Intelligence in Test Automation Processes",
       "price": 50.0,
-      "image": "/images/postman_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/ai-test-automation"
     },
     {
@@ -293,7 +293,7 @@
       "name": "Exploratory Testing Masterclass",
       "description": "Advanced Techniques for Unstructured and Creative Software Testing",
       "price": 50.0,
-      "image": "/images/qa_testing_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/exploratory-testing"
     },
     {
@@ -301,7 +301,7 @@
       "name": "Chaos Engineering and Testing",
       "description": "Advanced Techniques for Resilience Testing in Distributed Systems",
       "price": 50.0,
-      "image": "/images/k6_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/chaos-engineering"
     },
     {
@@ -309,7 +309,7 @@
       "name": "Test Case Design Techniques",
       "description": "Advanced Methods for Creating Effective and Comprehensive Test Cases",
       "price": 50.0,
-      "image": "/images/selenium_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-case-design-techniques"
     },
     {
@@ -317,7 +317,7 @@
       "name": "Cloud Performance Testing",
       "description": "Performance Testing Strategies for Cloud-Based Applications",
       "price": 50.0,
-      "image": "/images/cypress_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/cloud-performance-testing"
     },
     {
@@ -325,7 +325,7 @@
       "name": "Cross-Browser Testing Strategies",
       "description": "Advanced Techniques for Multi-Browser Compatibility Testing",
       "price": 50.0,
-      "image": "/images/selenium_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://cross-browser-testing"
     },
     {
@@ -333,7 +333,7 @@
       "name": "Testing in DevSecOps",
       "description": "Implementing Security Testing in DevOps Pipeline",
       "price": 50.0,
-      "image": "/images/qa_testing_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://devsecops-testing"
     },
     {
@@ -341,7 +341,7 @@
       "name": "Visual Regression Testing",
       "description": "Automated Testing for UI Changes and Visual Consistency",
       "price": 50.0,
-      "image": "/images/cypress_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://visual-regression"
     },
     {
@@ -349,7 +349,7 @@
       "name": "Testing in Scaled Agile Framework",
       "description": "Quality Assurance Strategies for SAFe Implementation",
       "price": 50.0,
-      "image": "/images/playwright_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://safe-testing"
     },
     {
@@ -357,7 +357,7 @@
       "name": "End-to-End Testing Architecture",
       "description": "Designing Comprehensive E2E Testing Solutions",
       "price": 50.0,
-      "image": "/images/k6_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://e2e-architecture"
     },
     {
@@ -365,7 +365,7 @@
       "name": "Testing GraphQL APIs",
       "description": "Specialized Testing Approaches for GraphQL Implementations",
       "price": 50.0,
-      "image": "/images/postman_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://graphql-testing"
     },
     {
@@ -373,7 +373,7 @@
       "name": "Testing Legacy Systems",
       "description": "Strategies for Testing and Maintaining Legacy Applications",
       "price": 50.0,
-      "image": "/images/SQL_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://legacy-testing"
     },
     {
@@ -381,7 +381,7 @@
       "name": "Testing in Edge Computing",
       "description": "Quality Assurance for Edge Computing Applications",
       "price": 50.0,
-      "image": "/images/qa_testing_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://edge-computing-testing"
     },
     {
@@ -389,7 +389,7 @@
       "name": "Testing Voice Interfaces",
       "description": "Quality Assurance for Voice-Controlled Applications",
       "price": 50.0,
-      "image": "/images/cypress_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://voice-interface-testing"
     },
     {
@@ -397,7 +397,7 @@
       "name": "Testing Progressive Web Apps",
       "description": "Comprehensive Testing Strategies for PWA Development",
       "price": 50.0,
-      "image": "/images/playwright_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://pwa-testing"
     }
   ],
@@ -471,7 +471,7 @@
       "name": "Masterclass de Pruebas de Aplicaciones Móviles",
       "description": "Técnicas Profundas de Pruebas para Apps Móviles y Desarrollo Multiplataforma",
       "price": 50.0,
-      "image": "/images/postman_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/mobile-app-testing"
     },
     {
@@ -479,7 +479,7 @@
       "name": "Fundamentos de Pruebas de Seguridad",
       "description": "Enfoque Integral para Identificar y Mitigar Vulnerabilidades de Software",
       "price": 50.0,
-      "image": "/images/selenium_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/security-testing"
     },
     {
@@ -487,7 +487,7 @@
       "name": "Pruebas en la Nube e Integración DevOps",
       "description": "Estrategias de Pruebas para Aplicaciones en la Nube y Entrega Continua",
       "price": 50.0,
-      "image": "/images/k6_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/cloud-testing-devops"
     },
     {
@@ -495,7 +495,7 @@
       "name": "Diseño de Pruebas y Desarrollo de Casos de Prueba",
       "description": "Técnicas Avanzadas para Crear Casos de Prueba Efectivos y Completos",
       "price": 50.0,
-      "image": "/images/cypress_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-case-design"
     },
     {
@@ -503,7 +503,7 @@
       "name": "Metodologías de Pruebas Ágiles",
       "description": "Implementación de Prácticas Efectivas de Pruebas en Desarrollo Ágil de Software",
       "price": 50.0,
-      "image": "/images/playwright_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/agile-testing"
     },
     {
@@ -511,7 +511,7 @@
       "name": "Machine Learning en Pruebas de Software",
       "description": "Exploración de Técnicas de IA y Machine Learning para Pruebas Avanzadas",
       "price": 50.0,
-      "image": "/images/SQL_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/ml-testing"
     },
     {
@@ -519,7 +519,7 @@
       "name": "Técnicas de Pruebas de Big Data",
       "description": "Estrategias de Pruebas para Plataformas de Procesamiento y Análisis de Datos a Gran Escala",
       "price": 50.0,
-      "image": "/images/postman_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/big-data-testing"
     },
     {
@@ -527,7 +527,7 @@
       "name": "Integración Continua y Pruebas",
       "description": "Implementación de Pruebas Automatizadas en Pipelines de Integración Continua",
       "price": 50.0,
-      "image": "/images/qa_testing_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/ci-testing"
     },
     {
@@ -535,7 +535,7 @@
       "name": "Fundamentos de Ingeniería de Rendimiento",
       "description": "Técnicas Avanzadas de Pruebas de Rendimiento y Optimización",
       "price": 50.0,
-      "image": "/images/k6_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/performance-engineering"
     },
     {
@@ -543,7 +543,7 @@
       "name": "Pruebas de Seguridad de Aplicaciones Web",
       "description": "Enfoque Integral para Identificar Vulnerabilidades en Aplicaciones Web",
       "price": 50.0,
-      "image": "/images/selenium_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/web-security-testing"
     },
     {
@@ -551,7 +551,7 @@
       "name": "Estrategias de Pruebas de Microservicios",
       "description": "Técnicas de Pruebas para Arquitecturas Distribuidas y Basadas en Microservicios",
       "price": 50.0,
-      "image": "/images/cypress_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/microservices-testing"
     },
     {
@@ -559,7 +559,7 @@
       "name": "Pruebas de Usabilidad y Accesibilidad",
       "description": "Técnicas Integrales para Validación de Experiencia de Usuario y Accesibilidad",
       "price": 50.0,
-      "image": "/images/playwright_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/usability-testing"
     },
     {
@@ -567,7 +567,7 @@
       "name": "Pruebas de Blockchain y Criptomonedas",
       "description": "Estrategias de Pruebas para Tecnologías Blockchain y Plataformas de Criptomonedas",
       "price": 50.0,
-      "image": "/images/SQL_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/blockchain-testing"
     },
     {
@@ -575,7 +575,7 @@
       "name": "Pruebas de Dispositivos IoT",
       "description": "Enfoques Integrales de Pruebas para Dispositivos del Internet de las Cosas (IoT)",
       "price": 50.0,
-      "image": "/images/postman_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/iot-testing"
     },
     {
@@ -583,7 +583,7 @@
       "name": "Diseño de Frameworks de Automatización de Pruebas",
       "description": "Construcción de Frameworks de Automatización de Pruebas Robustos y Escalables",
       "price": 50.0,
-      "image": "/images/qa_testing_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-automation-framework"
     },
     {
@@ -591,7 +591,7 @@
       "name": "Pruebas de Sistemas Embebidos",
       "description": "Técnicas de Pruebas para Sistemas de Software en Tiempo Real y Embebidos",
       "price": 50.0,
-      "image": "/images/k6_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/embedded-systems-testing"
     },
     {
@@ -599,7 +599,7 @@
       "name": "Técnicas de Pruebas de AR/VR",
       "description": "Estrategias de Pruebas para Aplicaciones de Realidad Aumentada y Virtual",
       "price": 50.0,
-      "image": "/images/selenium_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/ar-vr-testing"
     },
     {
@@ -607,7 +607,7 @@
       "name": "Pruebas de Rendimiento y Carga de APIs",
       "description": "Técnicas Avanzadas para Evaluación de Rendimiento y Pruebas de Estrés de APIs",
       "price": 50.0,
-      "image": "/images/cypress_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/api-performance-testing"
     },
     {
@@ -615,7 +615,7 @@
       "name": "Pruebas y Control de Calidad de Videojuegos",
       "description": "Enfoques Integrales de Pruebas para Desarrollo de Videojuegos",
       "price": 50.0,
-      "image": "/images/playwright_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/game-testing"
     },
     {
@@ -623,7 +623,7 @@
       "name": "Fundamentos de Pruebas de Ciberseguridad",
       "description": "Técnicas Profundas para Identificar y Mitigar Riesgos de Ciberseguridad",
       "price": 50.0,
-      "image": "/images/SQL_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/cybersecurity-testing"
     },
     {
@@ -631,7 +631,7 @@
       "name": "Pruebas de Aplicaciones Serverless",
       "description": "Estrategias de Pruebas para Arquitecturas Cloud-Native y Serverless",
       "price": 50.0,
-      "image": "/images/postman_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/serverless-testing"
     },
     {
@@ -639,7 +639,7 @@
       "name": "Gestión de Datos de Prueba",
       "description": "Técnicas para la Creación, Gestión y Anonimización Efectiva de Datos de Prueba",
       "price": 50.0,
-      "image": "/images/qa_testing_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-data-management"
     },
     {
@@ -647,7 +647,7 @@
       "name": "Containerización y Pruebas",
       "description": "Estrategias de Pruebas para Entornos Docker y Kubernetes",
       "price": 50.0,
-      "image": "/images/k6_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/containerization-testing"
     },
     {
@@ -655,7 +655,7 @@
       "name": "Pruebas de Modelos de Machine Learning",
       "description": "Técnicas Integrales de Validación para Modelos de IA y Machine Learning",
       "price": 50.0,
-      "image": "/images/selenium_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/ml-model-testing"
     },
     {
@@ -663,7 +663,7 @@
       "name": "Pruebas de Contrato para Microservicios",
       "description": "Técnicas Avanzadas para Validar Contratos de Servicio en Microservicios",
       "price": 50.0,
-      "image": "/images/cypress_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/contract-testing"
     },
     {
@@ -671,7 +671,7 @@
       "name": "Pruebas de Seguridad Móvil",
       "description": "Enfoques Integrales de Pruebas de Seguridad para Aplicaciones Móviles",
       "price": 50.0,
-      "image": "/images/playwright_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/mobile-security-testing"
     },
     {
@@ -679,7 +679,7 @@
       "name": "Técnicas de Pruebas de Regresión",
       "description": "Estrategias Avanzadas para Pruebas de Regresión y Optimización de Suite de Pruebas",
       "price": 50.0,
-      "image": "/images/SQL_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/regression-testing"
     },
     {
@@ -687,7 +687,7 @@
       "name": "Automatización de Pruebas con IA",
       "description": "Aprovechando la Inteligencia Artificial en Procesos de Automatización de Pruebas",
       "price": 50.0,
-      "image": "/images/postman_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/ai-test-automation"
     },
     {
@@ -695,7 +695,7 @@
       "name": "Masterclass de Pruebas Exploratorias",
       "description": "Técnicas Avanzadas para Pruebas de Software No Estructuradas y Creativas",
       "price": 50.0,
-      "image": "/images/qa_testing_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/exploratory-testing"
     },
     {
@@ -703,7 +703,7 @@
       "name": "Ingeniería del Caos y Pruebas",
       "description": "Técnicas Avanzadas para Pruebas de Resiliencia en Sistemas Distribuidos",
       "price": 50.0,
-      "image": "/images/k6_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/chaos-engineering"
     },
     {
@@ -711,7 +711,7 @@
       "name": "Técnicas de Diseño de Casos de Prueba",
       "description": "Métodos Avanzados para Crear Casos de Prueba Efectivos y Completos",
       "price": 50.0,
-      "image": "/images/selenium_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/test-case-design-techniques"
     },
     {
@@ -719,7 +719,7 @@
       "name": "Pruebas de Rendimiento en la Nube",
       "description": "Estrategias de Pruebas de Rendimiento para Aplicaciones Basadas en la Nube",
       "price": 50.0,
-      "image": "/images/cypress_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://www.upexgalaxy.com/en/cursos/cloud-performance-testing"
     },
     {
@@ -727,7 +727,7 @@
       "name": "Estrategias de Pruebas Cross-Browser",
       "description": "Técnicas Avanzadas para Pruebas de Compatibilidad Multi-Navegador",
       "price": 50.0,
-      "image": "/images/selenium_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://cross-browser-testing"
     },
     {
@@ -735,7 +735,7 @@
       "name": "Pruebas en DevSecOps",
       "description": "Implementación de Pruebas de Seguridad en Pipeline DevOps",
       "price": 50.0,
-      "image": "/images/qa_testing_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://devsecops-testing"
     },
     {
@@ -743,7 +743,7 @@
       "name": "Pruebas de Regresión Visual",
       "description": "Pruebas Automatizadas para Cambios de UI y Consistencia Visual",
       "price": 50.0,
-      "image": "/images/cypress_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://visual-regression"
     },
     {
@@ -751,7 +751,7 @@
       "name": "Pruebas en Framework Ágil Escalado",
       "description": "Estrategias de Aseguramiento de Calidad para Implementación SAFe",
       "price": 50.0,
-      "image": "/images/playwright_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://safe-testing"
     },
     {
@@ -759,7 +759,7 @@
       "name": "Arquitectura de Pruebas End-to-End",
       "description": "Diseñando Soluciones Integrales de Pruebas E2E",
       "price": 50.0,
-      "image": "/images/k6_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://e2e-architecture"
     },
     {
@@ -767,7 +767,7 @@
       "name": "Pruebas de APIs GraphQL",
       "description": "Enfoques Especializados de Pruebas para Implementaciones GraphQL",
       "price": 50.0,
-      "image": "/images/postman_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://graphql-testing"
     },
     {
@@ -775,7 +775,7 @@
       "name": "Pruebas de Sistemas Legacy",
       "description": "Estrategias para Pruebas y Mantenimiento de Aplicaciones Legacy",
       "price": 50.0,
-      "image": "/images/SQL_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://legacy-testing"
     },
     {
@@ -783,7 +783,7 @@
       "name": "Pruebas en Edge Computing",
       "description": "Aseguramiento de Calidad para Aplicaciones de Edge Computing",
       "price": 50.0,
-      "image": "/images/qa_testing_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://edge-computing-testing"
     },
     {
@@ -791,7 +791,7 @@
       "name": "Pruebas de Interfaces de Voz",
       "description": "Aseguramiento de Calidad para Aplicaciones Controladas por Voz",
       "price": 50.0,
-      "image": "/images/cypress_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://voice-interface-testing"
     },
     {
@@ -799,7 +799,7 @@
       "name": "Pruebas de Aplicaciones Web Progresivas",
       "description": "Estrategias Integrales de Pruebas para Desarrollo de PWA",
       "price": 50.0,
-      "image": "/images/playwright_card.png",
+      "image": "/images/upercitos.webp",
       "courseUrl": "https://pwa-testing"
     }
   ]

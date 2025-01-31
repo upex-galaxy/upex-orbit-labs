@@ -75,7 +75,7 @@ export default function Checkout() {
         const total = items.reduce((sum, item) => sum + item.price, 0);
         setTotalAmount(total);
       } else {
-        router.push("/orbit-labs/products");
+        router.push("/orbit-labs/inventory");
       }
     };
 
@@ -88,11 +88,11 @@ export default function Checkout() {
 
   const handleCompleteTransaction = () => {
     localStorage.removeItem("cart");
-    router.push("/orbit-labs/products");
+    router.push("/orbit-labs/inventory");
   };
 
   const handleContinueShopping = () => {
-    router.push("/orbit-labs/products");
+    router.push("/orbit-labs/inventory");
   };
 
   const updateStepCompletion = (stepIndex: number, completed: boolean) => {
@@ -293,6 +293,7 @@ export default function Checkout() {
                             {method.cardNumber.slice(-4)}
                           </p>
                           <p className="text-gray-300">{method.cardHolder}</p>
+                          <p className="text-gray-300">{method.petName}</p>
                         </div>
                         <div className="flex space-x-2">
                           <button
