@@ -52,8 +52,16 @@ export const STORAGE_KEYS = {
   PAYMENT_METHODS: 'orbitlabs_payment_methods'
 } as const;
 
-export const savedBuyerInfo = JSON.parse(localStorage.getItem(STORAGE_KEYS.BUYER_INFO) || '[]');
-export const savedPaymentMethods = JSON.parse(localStorage.getItem(STORAGE_KEYS.PAYMENT_METHODS) || '[]');
+const getLocalStorageItem = <T>(key: string, defaultValue: T): T => {
+  if (typeof window !== "undefined") {
+    const item = localStorage.getItem(key);
+    return item ? JSON.parse(item) : defaultValue;
+  }
+  return defaultValue;
+};
+
+export const savedBuyerInfo = getLocalStorageItem(STORAGE_KEYS.BUYER_INFO, []);
+export const savedPaymentMethods = getLocalStorageItem(STORAGE_KEYS.PAYMENT_METHODS, []);
 
 export interface Product {
   id: string;

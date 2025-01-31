@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Card, CardContent } from "./card";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -8,6 +8,7 @@ import { Product } from "../../../lib/utils";
 import productsData from "../../../app/data/products.json";
 import { ShoppingCart, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "../../../app/context/LanguageContext";
+import useLocalStorage from '../../../app/hooks/useLocalStorage';
 
 interface ProductsData {
   english: Product[];
@@ -19,31 +20,26 @@ const PRODUCTS_DATA: ProductsData = productsData;
 
 export default function Products() {
   const router = useRouter();
-  const [cart, setCart] = useState<Set<string>>(new Set());
+  const [cart, setCart] = useLocalStorage<Set<string>>('cart', new Set());
   const [currentPage, setCurrentPage] = useState(1);
   const { language, t, isLoading } = useLanguage();
 
-  // Seleccionar los productos según el idioma actual
   const PRODUCTS = language === 'en' ? PRODUCTS_DATA.english : PRODUCTS_DATA.spanish;
-  
-  // Calcular el número total de páginas
+
   const totalPages = Math.ceil(PRODUCTS.length / PRODUCTS_PER_PAGE);
 
-  // Obtener los productos de la página actual
   const getCurrentPageProducts = () => {
     const startIndex = (currentPage - 1) * PRODUCTS_PER_PAGE;
     const endIndex = startIndex + PRODUCTS_PER_PAGE;
     return PRODUCTS.slice(startIndex, endIndex);
   };
 
-  useEffect(() => {
-    const savedCart = localStorage.getItem("cart");
-    if (savedCart) {
-      setCart(new Set(JSON.parse(savedCart)));
-    }
-  }, []);
-
   const updateCart = (productId: string) => {
+    if (!(cart instanceof Set)) {
+      console.error("cart is not a Set:", cart);
+      return;
+    }
+
     const newCart = new Set(cart);
     if (cart.has(productId)) {
       newCart.delete(productId);
@@ -51,7 +47,6 @@ export default function Products() {
       newCart.add(productId);
     }
     setCart(newCart);
-    localStorage.setItem("cart", JSON.stringify(Array.from(newCart)));
   };
 
   const viewCart = () => {
@@ -142,7 +137,6 @@ export default function Products() {
         ))}
       </div>
 
-      {/* Paginación */}
       <div className="flex justify-center items-center space-x-4">
         <button
           onClick={() => handlePageChange(currentPage - 1)}

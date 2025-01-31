@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Bot, X, Sparkles, CreditCard } from "lucide-react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { useLanguage } from "../../../app/context/LanguageContext";
@@ -27,48 +27,48 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
   const [isTyping, setIsTyping] = useState(false);
   const [showAcceptButton, setShowAcceptButton] = useState(false);
 
-  const getConversationFlow = (): Message[] => [
+  const getConversationFlow = useCallback((): Message[] => [
     {
-      text: t('transactionModal.messages.0'),
+      text: t("transactionModal.messages.0"),
       delay: 2000,
       type: "thinking",
     },
     {
-      text: t('transactionModal.messages.1'),
+      text: t("transactionModal.messages.1"),
       delay: 3000,
       type: "alert",
     },
     {
-      text: t('transactionModal.messages.2'),
+      text: t("transactionModal.messages.2"),
       delay: 3000,
       type: "error",
     },
     {
-      text: t('transactionModal.messages.3'),
+      text: t("transactionModal.messages.3"),
       delay: 2000,
       type: "thinking",
     },
     {
-      text: t('transactionModal.messages.4'),
+      text: t("transactionModal.messages.4"),
       delay: 2500,
       type: "processing",
     },
     {
-      text: t('transactionModal.messages.5'),
+      text: t("transactionModal.messages.5"),
       delay: 2500,
       type: "processing",
     },
     {
-      text: t('transactionModal.messages.6'),
+      text: t("transactionModal.messages.6"),
       delay: 2000,
       type: "success",
     },
     {
-      text: t('transactionModal.messages.7'),
+      text: t("transactionModal.messages.7"),
       delay: 2000,
       type: "success",
     },
-  ];
+  ], [t]);
 
   const getMessageStyle = (type: Message["type"]) => {
     const baseStyle =
@@ -91,6 +91,7 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
 
   useEffect(() => {
     if (isOpen) {
+      console.log("Iniciando flujo de mensajes...");
       setCurrentMessage(null);
       setShowAcceptButton(false);
       const timeoutIds: NodeJS.Timeout[] = [];
@@ -98,6 +99,7 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
 
       const processMessages = async () => {
         for (let i = 0; i < conversationFlow.length; i++) {
+          console.log(`Mostrando mensaje ${i + 1}: ${conversationFlow[i].text}`);
           setIsTyping(true);
           await new Promise<void>((resolve) => {
             const typingTimeout = setTimeout(resolve, 1000);
@@ -107,10 +109,7 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
 
           setCurrentMessage(conversationFlow[i]);
           await new Promise<void>((resolve) => {
-            const messageTimeout = setTimeout(
-              resolve,
-              conversationFlow[i].delay
-            );
+            const messageTimeout = setTimeout(resolve, conversationFlow[i].delay);
             timeoutIds.push(messageTimeout);
           });
         }
@@ -120,17 +119,20 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
       processMessages();
 
       return () => {
+        console.log("Limpiando timeouts...");
         timeoutIds.forEach(clearTimeout);
         setCurrentMessage(null);
         setShowAcceptButton(false);
       };
     }
-  }, [isOpen]);
+  }, [isOpen, t, getConversationFlow]);
 
   const handleAccept = () => {
-    localStorage.clear();
-    onComplete();
-    onClose();
+    if (typeof window !== "undefined") {
+      localStorage.clear();
+      onComplete();
+      onClose();
+    }
   };
 
   return (
@@ -154,7 +156,7 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
             >
               <Bot className="text-blue-400" size={24} />
               <span className="text-lg font-semibold text-white">
-                {t('transactionModal.title')}
+                {t("transactionModal.title")}
               </span>
             </div>
 
@@ -204,7 +206,7 @@ const TransactionModal: React.FC<TransactionModalProps> = ({
                   onClick={handleAccept}
                   className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
                 >
-                  {t('transactionModal.buttons.accept')}
+                  {t("transactionModal.buttons.accept")}
                 </button>
               </div>
             )}

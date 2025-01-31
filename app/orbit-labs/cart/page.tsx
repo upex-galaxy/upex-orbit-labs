@@ -30,16 +30,19 @@ export default function CartPage() {
   const [cartItems, setCartItems] = useState<string[]>([]);
   const [total, setTotal] = useState(0);
 
-  const PRODUCTS = language === 'en' ? PRODUCTS_DATA.english : PRODUCTS_DATA.spanish;
-
   useEffect(() => {
-    const savedCart = localStorage.getItem("cart");
-    if (savedCart) {
-      const items = JSON.parse(savedCart);
-      setCartItems(Array.from(items));
-      calculateTotal(Array.from(items));
+    if (typeof window !== "undefined") {
+      const savedCart = localStorage.getItem("cart");
+      if (savedCart) {
+        const items = JSON.parse(savedCart) as string[];
+        setCartItems(items);
+        calculateTotal(items);
+      }
     }
   }, []);
+
+  const PRODUCTS =
+    language === "en" ? PRODUCTS_DATA.english : PRODUCTS_DATA.spanish;
 
   const calculateTotal = (items: string[]) => {
     const sum = items.reduce((acc, id) => {
@@ -50,10 +53,12 @@ export default function CartPage() {
   };
 
   const removeFromCart = (productId: string) => {
-    const newCart = cartItems.filter((id) => id !== productId);
-    setCartItems(newCart);
-    localStorage.setItem("cart", JSON.stringify(newCart));
-    calculateTotal(newCart);
+    if (typeof window !== "undefined") {
+      const newCartItems = cartItems.filter((id) => id !== productId);
+      setCartItems(newCartItems);
+      localStorage.setItem("cart", JSON.stringify(newCartItems));
+      calculateTotal(newCartItems);
+    }
   };
 
   const continueShopping = () => {
@@ -69,19 +74,23 @@ export default function CartPage() {
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <div className="flex items-center gap-1">
-            <h1 className="text-3xl font-bold text-white">{t('pages.cart.title')}</h1>
+            <h1 className="text-3xl font-bold text-white">
+              {t("pages.cart.title")}
+            </h1>
           </div>
           <button
             id="continue-shopping"
             onClick={continueShopping}
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
           >
-            {t('pages.cart.buttons.continueShopping')}
+            {t("pages.cart.buttons.continueShopping")}
           </button>
         </div>
 
         {cartItems.length === 0 ? (
-          <p className="text-center text-gray-300">{t('pages.cart.emptyCartMessage')}</p>
+          <p className="text-center text-gray-300">
+            {t("pages.cart.emptyCartMessage")}
+          </p>
         ) : (
           <>
             {cartItems.map((id) => {
@@ -116,7 +125,7 @@ export default function CartPage() {
                         onClick={() => removeFromCart(product.id)}
                         className="text-red-500 hover:text-red-600"
                       >
-                        {t('pages.inventory.buttons.remove')}
+                        {t("pages.inventory.buttons.remove")}
                       </button>
                     </div>
                   </CardContent>
@@ -132,7 +141,7 @@ export default function CartPage() {
                 onClick={continueCheckout}
                 className="mt-4 bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600"
               >
-                {t('pages.cart.buttons.proceedToCheckout')}
+                {t("pages.cart.buttons.proceedToCheckout")}
               </button>
             </div>
           </>

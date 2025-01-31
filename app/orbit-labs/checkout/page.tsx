@@ -38,24 +38,27 @@ export default function Checkout() {
   const [showPaymentForm, setShowPaymentForm] = useState(false);
 
   const [steps, setSteps] = useState<Step[]>(
-    CHECKOUT_STEPS.map(step => ({
+    CHECKOUT_STEPS.map((step) => ({
       ...step,
-      title: t(step.title)
+      title: t(step.title),
     }))
   );
-  
+
   const [buyerInfo, setBuyerInfo] = useState<BuyerFormPropsForm[]>([]);
   const [selectedBuyerIndex, setSelectedBuyerIndex] = useState<number>(-1);
   const [editingBuyer, setEditingBuyer] = useState<BuyerFormPropsForm | null>(
     null
   );
+
   useEffect(() => {
-    setSteps(CHECKOUT_STEPS.map(step => ({
-      ...step,
-      title: t(step.title)
-    })));
+    setSteps(
+      CHECKOUT_STEPS.map((step) => ({
+        ...step,
+        title: t(step.title),
+      }))
+    );
   }, [language, t]);
-  // Payment methods state
+
   const [paymentMethods, setPaymentMethods] = useState<PaymentMethod[]>([]);
   const [selectedPaymentIndex, setSelectedPaymentIndex] = useState<number>(-1);
   const [editingPayment, setEditingPayment] = useState<PaymentMethod | null>(
@@ -63,23 +66,18 @@ export default function Checkout() {
   );
 
   useEffect(() => {
-    const loadCartItems = () => {
+    if (typeof window !== "undefined") {
       const savedCart = localStorage.getItem("cart");
-      if (savedCart) {
-        const cartIds = new Set(JSON.parse(savedCart));
-        const PRODUCTS =
-          language === "en" ? PRODUCTS_DATA.english : PRODUCTS_DATA.spanish;
-        const items = PRODUCTS.filter((product) => cartIds.has(product.id));
-        setCartItems(items);
-
-        const total = items.reduce((sum, item) => sum + item.price, 0);
-        setTotalAmount(total);
-      } else {
+      if (!savedCart) {
         router.push("/orbit-labs/inventory");
+        return;
       }
-    };
-
-    loadCartItems();
+      const cartIds = new Set(JSON.parse(savedCart));
+      const PRODUCTS = language === "en" ? PRODUCTS_DATA.english : PRODUCTS_DATA.spanish;
+      const items = PRODUCTS.filter((product) => cartIds.has(product.id));
+      setCartItems(items);
+      setTotalAmount(items.reduce((sum, item) => sum + item.price, 0));
+    }
   }, [language, router]);
 
   const handleCloseModal = () => {
@@ -87,8 +85,10 @@ export default function Checkout() {
   };
 
   const handleCompleteTransaction = () => {
-    localStorage.removeItem("cart");
-    router.push("/orbit-labs/inventory");
+    if (typeof window !== "undefined") {
+      localStorage.removeItem("cart");
+      router.push("/orbit-labs/inventory");
+    }
   };
 
   const handleContinueShopping = () => {
@@ -96,7 +96,7 @@ export default function Checkout() {
   };
 
   const updateStepCompletion = (stepIndex: number, completed: boolean) => {
-    const newSteps = steps.map((step, index) => 
+    const newSteps = steps.map((step, index) =>
       index === stepIndex ? { ...step, isCompleted: completed } : step
     ) as Step[];
     setSteps(newSteps);
@@ -405,7 +405,7 @@ export default function Checkout() {
           </div>
 
           <OrderSummary
-            cartItems={cartItems.map(item => item.id)}
+            cartItems={cartItems.map((item) => item.id)}
             total={totalAmount}
             onContinueShopping={handleContinueShopping}
           />

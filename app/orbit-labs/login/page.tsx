@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import OrbitLabsLogin from '../login/page';
+import OrbitLabsLogin from '../../../components/ui/orbit-labs/login';
 
 const LoginPage: NextPage = () => {
   return (
