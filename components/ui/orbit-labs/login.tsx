@@ -1,23 +1,23 @@
-'use client'
+"use client";
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @next/next/no-img-element */
-import { useState } from 'react';
-import { Eye, EyeOff } from 'lucide-react';
-import { useAuth } from '../../../app/hooks/useAuth';
+import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
+import { useAuth } from "../../../app/hooks/useAuth";
 
 const OrbitLabsLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [formData, setFormData] = useState({ username: '', password: '' });
+  const [formData, setFormData] = useState({ username: "", password: "" });
   const { login, error } = useAuth();
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     login(formData);
   };
 
-  const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleInputChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   return (
@@ -26,21 +26,40 @@ const OrbitLabsLogin = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <div className="hidden md:flex flex-col items-center justify-center p-12 bg-gray-900/20">
             <div className="text-center">
-              <img 
-                src="/upexorbitlabs.webp" 
-                alt="Orbit Labs" 
-                className="w-48 h-48 object-contain mb-6"
-              />
-              <h2 className="text-2xl font-bold text-white mb-4">Welcome to UPEX</h2>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "column",
+                }}
+              >
+                <img
+                  src="/upexorbitlabs.webp"
+                  alt="Orbit Labs"
+                  className="w-48 h-48 object-contain mb-6"
+                />
+              </div>
+              <h2 className="text-2xl font-bold text-white mb-4">
+                Welcome to UPEX
+              </h2>
               <p className="text-gray-300">Access your Orbit Labs dashboard</p>
+              <p>
+                <strong>User Name:</strong>{" "}
+                <span className="text-gray-300">admin</span>
+              </p>
+              <p>
+                <strong>Password:</strong>{" "}
+                <span className="text-gray-300">upex2025</span>
+              </p>
             </div>
           </div>
 
           <div className="p-8 md:p-12">
             <div className="md:hidden flex justify-center mb-8">
-              <img 
-                src="/upexorbitlabs.webp" 
-                alt="Orbit Labs" 
+              <img
+                src="/upexorbitlabs.webp"
+                alt="Orbit Labs"
                 className="w-24 h-24 object-contain"
               />
             </div>
@@ -48,8 +67,8 @@ const OrbitLabsLogin = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-4">
                 <div>
-                  <label 
-                    htmlFor="username" 
+                  <label
+                    htmlFor="username"
                     className="block text-sm font-medium text-gray-200 mb-2"
                   >
                     Username
@@ -68,8 +87,8 @@ const OrbitLabsLogin = () => {
                 </div>
 
                 <div>
-                  <label 
-                    htmlFor="password" 
+                  <label
+                    htmlFor="password"
                     className="block text-sm font-medium text-gray-200 mb-2"
                   >
                     Password
@@ -92,18 +111,21 @@ const OrbitLabsLogin = () => {
                       className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 
                                 hover:text-gray-200 transition-colors"
                     >
-                      {showPassword ? 
-                        <EyeOff className="w-5 h-5" /> : 
+                      {showPassword ? (
+                        <EyeOff className="w-5 h-5" />
+                      ) : (
                         <Eye className="w-5 h-5" />
-                      }
+                      )}
                     </button>
                   </div>
                 </div>
               </div>
 
               {error && (
-                <div className="text-red-400 text-sm bg-red-900/20 border border-red-800 
-                              rounded-lg p-3">
+                <div
+                  className="text-red-400 text-sm bg-red-900/20 border border-red-800 
+                              rounded-lg p-3"
+                >
                   {error}
                 </div>
               )}
